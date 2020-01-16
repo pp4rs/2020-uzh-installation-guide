@@ -9,20 +9,18 @@ Programming Practices for Research in Economics was created by
 * Julian Langer
 * Max Winkler
 
-at the Department of Economics, University of Zurich in 2016. This installation guide is for the 2018 edition, conducted by
+at the Department of Economics, University of Zurich in 2016. This installation guide is for the 2020 edition, conducted by
 
 * Ulrich Bergmann
-* Ursina Schaede
-* Dora Simon
-* Carlo Zanella
-* Christian Zünd
+* Lachlan Deer
+* Matteo Courthoud
 
 ## Questions or Comments?
 
 Please contact us via email:
 
 ```
-programming "AT" econ.uzh.ch
+pp4rs.contact "AT" gmail.com
 ```
 
 with the title "Installation Guide: Programming Practices for Research in Economics."
