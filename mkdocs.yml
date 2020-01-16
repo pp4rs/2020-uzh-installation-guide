@@ -1,6 +1,7 @@
 site_name: Programming Practices for Research in Econonomics
 pages:
 - Welcome: index.md
+- Windows Subsystem: windows-wsl.md
 #- Terminology: terminology.md
 - Command Line Tools: commandLine.md
 - Text Editor: textEditor.md
