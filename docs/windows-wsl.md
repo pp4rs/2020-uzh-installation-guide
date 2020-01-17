@@ -1,3 +1,6 @@
+<!-- markdownlint-disable MD033 -->
+<!-- see https://github.com/DavidAnson/markdownlint for code to enable or disable rules -->
+
 # Windows Subsystem For Linux
 
 !!! tip "Windows Users Only!"
@@ -64,8 +67,8 @@ Proceed as follows:
 
 ## Installing a Linux Distribution
 
-We are going to install 'Ubuntu' as our Linux distribution of choice. 
-It is one of the more user friendly choices around. 
+We are going to install 'Ubuntu' as our Linux distribution of choice.
+It is one of the more user friendly choices around.
 
 Once your PC has rebooted, proceed as follows:
 
