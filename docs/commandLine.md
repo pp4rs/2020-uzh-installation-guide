@@ -8,19 +8,19 @@ Throughout the course we will emphasize use of the terminal and executing comman
 
 A command line interface comes already installed with OSX.
 
-You will need to install some other software from the terminal thoughout the course, so it will be useful to install some additional "command line tools" now.
+You will need to install some other software from the terminal throughout the course, so it will be useful to install some additional "command line tools" now.
 
 ### Opening a Terminal Session
 
 To open a terminal session:
 
-* Open spotlight with `cmd + spacebar`
+* Open spotlight with `cmd + space`
 * Type in 'terminal'
 * When the terminal appears, open it.
 
 ### Installing New Tools for the Terminal
 
-#### The X-code Tools 
+#### The X-code Tools
 
 We want to install 'X-code command line tools'. Copy and paste the following and press `Return`
 
@@ -45,6 +45,7 @@ Verify that Homebrew installed correctly, enter the following into your terminal
 ``` bash
 brew doctor
 ```
+
 And you should see the following output:
 
 ``` bash
@@ -59,7 +60,7 @@ brew upgrade
 
 ### Installing Packages with Homebrew
 
-Now we can use homebrew to easily install software.  We need some basic system tools for some of the programs we will install later. 
+Now we can use homebrew to easily install software.  We need some basic system tools for some of the programs we will install later.
 
 In particular we need:
 
@@ -80,7 +81,7 @@ If you get a message that the package you are trying to reinstall is not yet ins
 
 ### Linking Packages to a Terminal Session
 
-We need to ensure that our terminal session has access to what we installed. 
+We need to ensure that our terminal session has access to what we installed.
 To do this we add some extra lines to our bash profile (we will discuss what this means in class - do what we say for now):
 
 ``` bash
@@ -91,7 +92,7 @@ source .bash_profile
 
 ## Linux & Windows Users
 
-* Linux Users: Open a terminal session with `Crtl` + `Alt` + `T`.
+* Linux Users: Open a terminal session with `Ctrl` + `Alt` + `T`.
 * Windows Users: Open the Ubuntu Terminal as we described [here](/windows-wsl/#installing-windows-terminal)
 
 Copy the following command into terminal and press `Return`:
@@ -110,15 +111,18 @@ sudo apt-get install gdebi-core
 ```
 
 !!! tip "Windows Users: Copy and Paste"
-    The 'tradtional' `Ctrl + C` and `Ctrl + v` doesn't work with you terminal. 
+    The 'traditional' `Ctrl + C` and `Ctrl + v` doesn't work with you terminal.
     To save manually writing stuff in, highlight the text with you cursor, and then in the terminal use your mouses right-click to paste it in.
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
 !!! tip "Windows Users: Library Installation"
     At some point in the install process you may see a screen like this one:
-
+    
     <img src="../img/misc-windows/96-lib-installer.jpg" class="center" height = "500">
 
     Here you need to make a choice, which you do by using the left and right arrows followed by `Return`.
     Lachlan chose, 'No' - but you can safely choose yes without your computer burning down.
 
     Whenever you get these kinds of screens, you can scroll up and down with the up and down buttons if needed and make decisions by selecting a choice as described above.
+<!-- markdownlint-restore -->
