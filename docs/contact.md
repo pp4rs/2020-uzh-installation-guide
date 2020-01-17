@@ -1,10 +1,10 @@
 # Contact Us
 
-## Questions or Comments?
+## Questions or Comments
 
 Please contact us via email:
 
-```
+``` bash
 pp4rs.contact "AT" gmail.com
 ```
 
