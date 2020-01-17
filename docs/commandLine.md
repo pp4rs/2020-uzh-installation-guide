@@ -109,9 +109,10 @@ sudo apt-get install libssl-dev
 sudo apt-get install gdebi-core
 ```
 
-!!! tip "Windows Users: Copy and Paste"
-    The 'tradtional' `Ctrl + C` and `Ctrl + v` doesn't work with you terminal. 
-    To save manually writing stuff in, highlight the text with you cursor, and then in the terminal use your mouses right-click to paste it in.
+!!! tip "When using a terminal, the 'traditional' copy and paste commands `Ctrl + C` and `Ctrl + v` do not work as `Ctrl + Key` commands have a special meaning.
+You need to additionally press the `Shift` key; 
+Therefore, copy is `Ctrl + Shift + C` and paste is `Ctrl + Shift + V`. 
+Alternatively, you can always right-click and select Copy or Paste.
 
 !!! tip "Windows Users: Library Installation"
     At some point in the install process you may see a screen like this one:
