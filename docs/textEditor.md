@@ -1,7 +1,7 @@
 # Motivation
 
 A good text editor lies at the heart of any serious programmer's toolkit: It can do almost anything and makes you much more productive.
-The editors built into a specific program are generally are not an option (we will find certain cases where you may want to use them).
+The editors built into a specific program are generally are not a satisfying option (we will find certain cases where you may want to use them).
 
 <!-- Please download, install it along with the necessary packages and stick with it for at least the duration of the course and assignment to get a feel for how it works. -->
 
@@ -18,8 +18,9 @@ Go to the [downloads page](https://www.sublimetext.com/3) and download the live 
 # VS Code
 
 VS Code is a relatively new text editor that works across all three platforms: Linux, Windows and Mac.
+In a short time it has already become the most used graphical text editor and we hope you will soon see why.
 It is built by Microsoft, but is open source, i.e. everyone can see and modify the program's internal code - so it is less nasty on the conscious than some of Microsoft's traditional products.
-The main advantages for us are that it includes support for debugging, embedded Git control and GitHub, syntax highlighting, intelligent code completion - all of which make our lives much easier.
+The main advantages for us are that it includes support for debugging, embedded Git control and GitHub, syntax highlighting, intelligent code completion, and many useful plugins - all of which make our lives much easier.
 
 ## Installing VS Code on Mac
 
@@ -64,6 +65,7 @@ When the unpacking is complete, VS Code should open.
 
 !!! tip "Windows Defender Firewall"
     You will likely get the following pop-up during the above process:
+    
     <img src="../img/misc-windows/97-allow-access-defender.jpg" class="center" height = "500">
 
     Click 'Allow access' if you do.
