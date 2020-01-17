@@ -29,26 +29,38 @@ Proceed as follows:
 1. Open 'Settings' by searching for it in the search bar
 
     <img src="../img/install-wsl/01-settings.jpg" class="center" height = "500">
+    
+    <br/>
 
 2. In Setting, search for 'Apps & features'
 
     <img src="../img/install-wsl/02-apps-features.jpg" class="center" height = "500">
+    
+    <br/>
 
 3. Scroll down and click on 'Programs and Features'
 
     <img src="../img/install-wsl/03-programs-features.jpg" class="center" height = "500">
 
+    <br/>
+
 4. On the left, click on 'Turn Windows features on or off'
 
     <img src="../img/install-wsl/04-features-on-off.jpg" class="center" height = "500">
+
+    <br/>
 
 5. Scroll down until you see 'Windows Subsystem for Linux' and click the box, and then click 'OK'
 
     <img src="../img/install-wsl/05-wsl-ok.jpg" class="center" height = "500">
 
+    <br/>
+
 6. A prompt to restart your PC will appear, click 'Restart now' to restart your PC.
 
     <img src="../img/install-wsl/06-complete-and-restart.jpg" class="center" height = "500">
+
+    <br/>
 
 ## Installing a Linux Distribution
 
@@ -60,44 +72,65 @@ Once your PC has rebooted, proceed as follows:
 1. Open the Micrsoft Store by searching for it in the search bar
 
     <img src="../img/install-linux-dist/01-search-store.jpg" class="center" height = "500">
+    
+    <br/><br/>
 
 
 2. Search for 'Ubuntu' in the Store search bar and press enter
 
     <img src="../img/install-linux-dist/02-search-ubuntu.jpg" class="center" height = "500">
 
+    <br/>
+
 3. Select 'Ubuntu 18.04 LTS' from the choices returned by clicking on it
 
     <img src="../img/install-linux-dist/03-select-ubuntu-lts.jpg" class="center" height = "500">
+
+    <br/>
 
 4. Click 'Get' to install
 
     <img src="../img/install-linux-dist/04-ubuntu-18.jpg" class="center" height = "500">
 
+    <br/>
+
 5. Once installed, if you open the Windows Menu, you will See 'Ubuntu 18.04 LTS' under 'Recently Added'
 
     <img src="../img/install-linux-dist/05-ubuntu-installed.jpg" class="center" height = "500">
+
+    <br/>
 
 6. Click on 'Ubuntu 18.04 LTS.' A black terminal will open, and inform you it is installing
 
     <img src="../img/install-linux-dist/07-installing.jpg" class="center" height = "500">
 
+    <br/>
+
 7. Once installed, it will prompt you to create an account. Enter a username
 
     <img src="../img/install-linux-dist/08-unix-username.jpg" class="center" height = "500">
+
+    <br/>
 
 8. And a password (Note: as you enter a password nothing will appear)
 
     <img src="../img/install-linux-dist/09-unix-password.jpg" class="center" height = "500">
 
+    <br/>
+
 9. Re-enter the password as instructed
 
     <img src="../img/install-linux-dist/10-unix-password-reenter.jpg" class="center" height = "500">
+
+    <br/>
 
 10. The installation will now have completed
 
     <img src="../img/install-linux-dist/11-ubuntu-success.jpg" class="center" height = "500">
 
+    <br/>
+
+### WSL Not Enabled Errors?
 
 !!! danger "WSL not enabled"
 
