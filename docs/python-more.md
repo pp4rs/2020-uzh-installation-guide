@@ -45,3 +45,4 @@ Successfully installed selenium-3.14.0
 Please also install the following packages:
 
 *   linearmodels
+*   virtualenvwrapper
