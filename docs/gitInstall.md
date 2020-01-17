@@ -14,7 +14,9 @@ During the course we will show you how to use [GitHub](https://www.github.com) t
 <!-- During the course we will show you how to host some of your work on GitHub and the Economics Department's internal GitLab server.
 You will need to setup accounts for each of these: -->
 
-*   Please [register](https://github.com/join) for a [GitHub](https://github.com/) account
+* Please [register](https://github.com/join) for a [GitHub](https://github.com/) account
+* When choosing a username we recommend not using a name that includes an employer or university in case you move later on
+    - i.e. 'johnsmith' or 'johnsmith86' are OK, 'johnsmithUZH' probably not
 <!-- *   Sign into the [Economics Department's GitLab server](https://econgit.uzh.ch/). Use your UZH shortname and your web-access password (same as for OLAT). You will need to access "Econ Git" while on-site at UZH or whilst using a UZH VPN if you are off-site. -->
 
 <!-- !!! danger "Non-UZH Economics Students"
@@ -24,7 +26,66 @@ You will need to setup accounts for each of these: -->
 
 ## Mac Users
 
-On MacOS, download and install Git from [here](http://git-scm.com/download/mac). If your system says it can't be opened, because it is from an unidentified developer, then open it via right-lick and `open`.
+### Installing Git 
+
+We will install Git using Homebrew. Enter the following lines of code into your terminal:
+
+``` bash
+brew install git
+brew link --force git
+```
+
+Then close and reopen the terminal. Now [Verify your installation](#verifying your install)
+
+
+### Autocompletion
+
+When we code we want to be lazy - we don't always want to write out the whole line of code we want to enter, and would prefer the computer to autocomplete our line of code for us.
+The OSX terminal doesn't have this autocompletion by default, so let's add it using our trusty friend Homebrew.
+
+Open a terminal and enter:
+
+``` bash
+brew install auto-completion
+```
+
+This installs 'bash completion' into a file `/usr/local/etc/bash_completion.d`.
+
+To make the autocompletion work, type the following into your terminal:
+
+```bash
+echo "[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion" >> ~/.bash_profile
+```
+
+And restart your terminal session:
+
+``` bash
+source ~/.bash_profile
+```
+
+### Checking Autocomplete works
+
+Now you can autocomplete by pressing `tab` twice after a command.
+We will demonstrate this in class.
+
+For now, enter the following into you terminal and press `tab` twice (which we depict as `[tab] [tab]`) below:
+
+``` bash
+git [tab] [tab]
+```
+
+which will then show:
+
+```bash
+$ git [tab] [tab]
+add            blame          cherry-pick    config         format-patch   gui            merge          push           repack         rm             stage          whatchanged
+am             branch         citool         describe       fsck           help           mergetool      range-diff     replace        send-email     stash          worktree
+apply          bundle         clean          diff           gc             init           mv             rebase         request-pull   shortlog       status
+archive        checkout       clone          difftool       gitk           instaweb       notes          reflog         reset          show           submodule
+bisect         cherry         commit         fetch          grep           log            pull           remote         revert         show-branch    tag
+```
+
+<!--  OLD autocompletion guide - let's hope the brew one works
 Also install the command-line auto-completion script. For this go to [this website](https://github.com/git/git/raw/master/contrib/completion/git-completion.bash). You should now see a the text file starting with
 
 ```
@@ -37,48 +98,32 @@ Also install the command-line auto-completion script. For this go to [this websi
 
 save this file as `git-completion.bash` to your user folder by pressing `CMD+s`. If you want to know where your user folder is, open a terminal and type ```pwd```. For Uli it is for example under `/Users/ubergmann`.
 
-If you use Safari, make sure to save the file as `Page Source` and don't append a `.txt` to its filename (Chrome does this automatically). If everything went right, you can now type `ls` in your terminal window and should see `git-completion.bash` there between other files.
+If you use Safari, make sure to save the file as `Page Source` and don't append a `.txt` to its filename (Chrome does this automatically). If everything went right, you can now type `ls` in your terminal window and should see `git-completion.bash` there between other files. -->
 
 
 ## Linux Users
 
-Follow the steps documented [here](https://git-scm.com/download/linux) to install on Linux from the terminal.
+Git should be installed already for you. 
+To check if it is, enter the following in a terminal:
 
-!!! danger
-    To install system software using `apt-get`, you need `Super User` rights. So please add `sudo` in front of each `apt-get` command in the document above, like so: ```sudo apt-get install git```
+``` bash
+git --version
+```
 
+If you get a bunch of numbers (ideally starting with 2.15) or higher - you are good to move on.
+
+If not, install it by entering the following into the command line:
+
+``` bash
+sudo apt-get install git
+```
+
+Once complete, [verify your install](#verifying-your-install).
 
 ## Windows Users
 
-Download and install the latest versions of [msysgit](http://msysgit.github.io)
-
-<!--, and
-*   [TortoiseGit](http://code.google.com/p/tortoisegit/wiki/Download)
--->
-
-After installing these programs use Windows Explorer to go to a folder that contains some documents (any folder) and right click on it.
-You should see some additional items - "GitBash" appear in the context menu upon right-clicking.
-
-
-!!! danger "Windows PATH Setting Redux"
-    We also want Git from the command line, so we again need to update our PATH settings.
-
-    Right-click on Computer. Then go to "Properties" and select the tab "Advanced System settings". Choose "Environment Variables" and select `Path` from the list of system variables.
-
-    Choose `Edit`.
-
-    **On Windows 7 or 8 machines:**
-    If you accepted all defaults during your installation, and didn't have any other non-default setting prior to starting this guide, modifying the following string, copy and paste the following string without spaces at the start or end:
-
-           ;C:\Program Files\Git\bin
-
-    **On Windows 10 machines:**
-    Click `New` and paste the following string:
-
-            C:\Program Files\Git\bin
-
-    Click on `OK` as often as needed.
-
+Git will be already installed inside your Ubuntu terminal.
+Verify this, by following [these instructions](#verifying-your-install).
 
 ## Verifying your install
 
