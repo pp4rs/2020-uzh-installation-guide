@@ -85,11 +85,6 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../snakemake/">Build Tools</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../webscraping_drivers/">Webscraping</a>
 	    </li>
           
@@ -108,17 +103,26 @@
     <a class="current" href="./">LaTeX & Pandoc</a>
     <ul class="subnav">
             
+    <li class="toctree-l2"><a href="#latex">LaTeX</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#latex-install-for-mac">LaTeX Install for Mac</a></li>
+        
+            <li><a class="toctree-l3" href="#latex-install-for-linux-windows">LaTeX Install for Linux &amp; Windows</a></li>
+        
+        </ul>
+    
+
     <li class="toctree-l2"><a href="#pandoc">Pandoc</a></li>
     
         <ul>
         
-            <li><a class="toctree-l3" href="#linux">Linux</a></li>
+            <li><a class="toctree-l3" href="#pandoc-install-for-linux-windows">Pandoc Install for Linux &amp; Windows</a></li>
         
-            <li><a class="toctree-l3" href="#mac">Mac</a></li>
+            <li><a class="toctree-l3" href="#pandoc-install-for-mac">Pandoc Install for Mac</a></li>
         
-            <li><a class="toctree-l3" href="#windows">Windows</a></li>
-        
-            <li><a class="toctree-l3" href="#verify-your-install">Verify Your Install</a></li>
+            <li><a class="toctree-l3" href="#verify-pandoc-install">Verify Pandoc Install</a></li>
         
         </ul>
     
@@ -128,7 +132,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../finish.md">The Finish Line!</a>
+    <a class="" href="../finish-line/">The Finish Line!</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -178,53 +182,82 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="pandoc">Pandoc</h1>
+                <h1 id="latex">LaTeX</h1>
+<p>LaTeX is a document preparation system for high-quality typesetting most often used for medium-to-large technical or scientific documents.
+Most of you probably have some familarity with LaTeX from your Master's Theses.</p>
+<p>We may want to build some PDF documents throughout the course using LaTeX - so let's install it.</p>
+<h2 id="latex-install-for-mac">LaTeX Install for Mac</h2>
+<p>We again install from Homebrew.
+Enter the following into the terminal:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>brew cask install mactex
+</pre></div>
+</td></tr></table>
+
+<h2 id="latex-install-for-linux-windows">LaTeX Install for Linux &amp; Windows</h2>
+<p>LaTeX can be installed from the terminal by entering the following command and pressing <code>Return</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-get install texlive-latex-extra
+</pre></div>
+</td></tr></table>
+
+<p>Check everything went according to plan:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">tex</span> <span class="c1">--version</span>
+</pre></div>
+</td></tr></table>
+
+<p>which gives the following output:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nv">TeX</span> <span class="mi">3</span>.<span class="mi">14159265</span> <span class="ss">(</span><span class="nv">TeX</span> <span class="nv">Live</span> <span class="mi">2019</span><span class="o">/</span><span class="nv">Debian</span><span class="ss">)</span>
+<span class="nv">kpathsea</span> <span class="nv">version</span> <span class="mi">6</span>.<span class="mi">3</span>.<span class="mi">1</span>
+<span class="nv">Copyright</span> <span class="mi">2019</span> <span class="nv">D</span>.<span class="nv">E</span>. <span class="nv">Knuth</span>.
+<span class="nv">There</span> <span class="nv">is</span> <span class="nv">NO</span> <span class="nv">warranty</span>.  <span class="nv">Redistribution</span> <span class="nv">of</span> <span class="nv">this</span> <span class="nv">software</span> <span class="nv">is</span>
+<span class="nv">covered</span> <span class="nv">by</span> <span class="nv">the</span> <span class="nv">terms</span> <span class="nv">of</span> <span class="nv">both</span> <span class="nv">the</span> <span class="nv">TeX</span> <span class="nv">copyright</span> <span class="nv">and</span>
+<span class="nv">the</span> <span class="nv">Lesser</span> <span class="nv">GNU</span> <span class="nv">General</span> <span class="nv">Public</span> <span class="nv">License</span>.
+<span class="k">For</span> <span class="nv">more</span> <span class="nv">information</span> <span class="nv">about</span> <span class="nv">these</span> <span class="nv">matters</span>, <span class="nv">see</span> <span class="nv">the</span> <span class="nv">file</span>
+<span class="nv">named</span> <span class="nv">COPYING</span> <span class="nv">and</span> <span class="nv">the</span> <span class="nv">TeX</span> <span class="nv">source</span>.
+<span class="nv">Primary</span> <span class="nv">author</span> <span class="nv">of</span> <span class="nv">TeX</span>: <span class="nv">D</span>.<span class="nv">E</span>. <span class="nv">Knuth</span>.
+</pre></div>
+</td></tr></table>
+
+<h1 id="pandoc">Pandoc</h1>
 <p>Pandoc is an extremely useful 'swiss army knife' for converting between different types of markup languages from the command line.
 For example, it readily builds PDFs with latex, and markdown - both of which are heavily used in academic research.</p>
-<p>We do not actively teach how to use Pandoc in the course - but we will utilize it in some lessons where we produce PDF, Word or HTML output from plain text files.</p>
-<h2 id="linux">Linux</h2>
+<div class="admonition note">
+<p class="admonition-title">Note<p>We do not actively teach how to use Pandoc in the course - but we will utilize it in some lessons where we produce PDF, Word or HTML output from plain text files.</p>
+</p>
+</div>
+<h2 id="pandoc-install-for-linux-windows">Pandoc Install for Linux &amp; Windows</h2>
 <p>Open a terminal window and type</p>
-<pre><code class="bash">sudo apt install pandoc
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt install pandoc
+</pre></div>
+</td></tr></table>
 
 <p>to install pandoc from the command line</p>
-<h2 id="mac">Mac</h2>
-<p>Open a terminal window and type</p>
-<pre><code class="bash">brew install pandoc
-</code></pre>
+<h2 id="pandoc-install-for-mac">Pandoc Install for Mac</h2>
+<p>In a terminal window and type:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>brew install pandoc
+</pre></div>
+</td></tr></table>
 
-<p>to install pandoc from the command line</p>
-<h2 id="windows">Windows</h2>
-<p>Go to the <a href="https://pandoc.org/">Pandoc Homepage</a> and follow the installation instructions for your operating system.</p>
-<h2 id="verify-your-install">Verify Your Install</h2>
+<p>Now <a href="verify-pandoc-install">verify your install</a>.</p>
+<h2 id="verify-pandoc-install">Verify Pandoc Install</h2>
 <p>Verify your install by typing the following into a command line:</p>
-<pre><code class="bash">pandoc --version
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pandoc --version
+</pre></div>
+</td></tr></table>
 
 <p>The expected output starts with the following information:</p>
-<pre><code class="bash">pandoc 1.19.2.1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pandoc <span class="m">2</span>.2.x.x
+</pre></div>
+</td></tr></table>
 
-</code></pre>
-
-<p>Ensure you have at least version 1.15.1 installed.</p>
-<div class="admonition danger">
-<p class="admonition-title"> Windows PATH Setting redux</p>
-<p>Because we want Pandoc available from the command line (it is by default for Mac and Linux), we again need to update our PATH settings.</p>
-<p>Right-click on Computer. Then go to "Properties" and select the tab "Advanced System Settings". Choose "Environment Variables" and select <code>Path</code> from the list of system variables.</p>
-<p>Check whether the following path has been added:</p>
-<pre><code>    ;C:\Users\username\AppData\Local\Pandoc
-</code></pre>
-<p><strong>Windows 7 or 8 machines:</strong>
-If it has not been, and you accepted all defaults during your installation, and didn't have any other non-default setting prior to starting this guide, copy and paste the following string without spaces at the start or end, updating the <code>username</code>:</p>
-<pre><code>    ;C:\Users\username\AppData\Local\Pandoc
-</code></pre>
-<p><strong>Windows 10 machines:</strong>
-If it has not been added, Click <code>New</code> and paste the following string, updating the username:</p>
-<pre><code>    C:\Users\username\AppData\Local\Pandoc
-</code></pre>
-<p>Click OK as often as needed.</p>
-<p>After you have done this, open a <strong>new</strong> terminal and try and verify your install.</p>
-</div>
+<p>Ensure you have at least version 2.1.1 installed.</p>
               
             </div>
           </div>
@@ -232,7 +265,7 @@ If it has not been added, Click <code>New</code> and paste the following string,
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../contact/" class="btn btn-neutral float-right" title="Contact Us">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../finish-line/" class="btn btn-neutral float-right" title="The Finish Line!">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../r/" class="btn btn-neutral" title="R"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -264,7 +297,7 @@ If it has not been added, Click <code>New</code> and paste the following string,
         <span><a href="../r/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../contact/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../finish-line/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

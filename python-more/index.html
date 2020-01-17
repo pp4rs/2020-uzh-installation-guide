@@ -97,11 +97,6 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../snakemake/">Build Tools</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../webscraping_drivers/">Webscraping</a>
 	    </li>
           
@@ -122,7 +117,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../finish.md">The Finish Line!</a>
+    <a class="" href="../finish-line/">The Finish Line!</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -176,31 +171,36 @@
 <p>Anaconda's Python Distribution comes with many of the packages we need to do scientific computing.
 If you're interested in all the packages included, click <a href="https://docs.continuum.io/anaconda/packages/pkg-docs">here</a> and go to the Python 3.6 tab.</p>
 <p>Howevever, you may come across packages that are not installed by default.
-In this case we recommend you use the <code>pip</code> package management tool to install them.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If your python 3 was found via <code>python3 --version</code> on the previous page, then type <code>pip3</code> instead of <code>pip</code> for all of the following python plugins.</p>
-</div>
+In this case we recommend you use the <code>pip</code> package management tool to install them.
+The following recipe works for <em>all</em> operating systems.</p>
+<!-- !!! note
+    If your python 3 was found via `python3 --version` on the previous page, then type `pip3` instead of `pip` for all of the following python plugins. -->
+
 <p>First let us update pip by typing the following into the terminal</p>
-<pre><code class="bash">pip install --upgrade pip
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install --upgrade pip
+</pre></div>
+</td></tr></table>
 
 <p>If you get an error, try typing instead:</p>
-<pre><code class="bash">python -m pip install --upgrade pip
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python -m pip install --upgrade pip
+</pre></div>
+</td></tr></table>
 
 <p>For this course, we will need the package <code>Selenium</code> as part of the web scraping tool kit we will build up. First let us install a depency for it via</p>
-<pre><code class="bash">pip install msgpack
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install msgpack
+</pre></div>
+</td></tr></table>
 
 <p>We then install <code>selenium</code> by entering the following into a terminal:</p>
-<pre><code class="bash">pip install selenium
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install selenium
+</pre></div>
+</td></tr></table>
 
 <p><code>pip</code> will then go through and install the package we asked for, and any other dependencies.
 If this succeeded, the last line it printed out should be:</p>
-<pre><code>Successfully installed selenium-3.14.0
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">Successfully</span> <span class="n">installed</span> <span class="n">selenium</span><span class="o">-</span><span class="mi">3</span><span class="p">.</span><span class="mi">14</span><span class="p">.</span><span class="mi">0</span>
+</pre></div>
+</td></tr></table>
 
 <h2 id="more-packages">More packages</h2>
 <p>Please also install the following packages:</p>
@@ -214,7 +214,7 @@ If this succeeded, the last line it printed out should be:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../snakemake/" class="btn btn-neutral float-right" title="Build Tools">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../webscraping_drivers/" class="btn btn-neutral float-right" title="Webscraping">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../python/" class="btn btn-neutral" title="Python"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -246,7 +246,7 @@ If this succeeded, the last line it printed out should be:</p>
         <span><a href="../python/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../snakemake/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../webscraping_drivers/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

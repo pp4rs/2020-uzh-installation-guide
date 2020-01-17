@@ -67,11 +67,9 @@
     
         <ul>
         
-            <li><a class="toctree-l3" href="#windows-users">Windows Users</a></li>
-        
             <li><a class="toctree-l3" href="#mac-users">Mac Users</a></li>
         
-            <li><a class="toctree-l3" href="#linux-users">Linux Users</a></li>
+            <li><a class="toctree-l3" href="#linux-windows-users">Linux &amp; Windows Users</a></li>
         
         </ul>
     
@@ -101,11 +99,6 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../snakemake/">Build Tools</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../webscraping_drivers/">Webscraping</a>
 	    </li>
           
@@ -126,7 +119,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../finish.md">The Finish Line!</a>
+    <a class="" href="../finish-line/">The Finish Line!</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -177,112 +170,109 @@
             <div class="section">
               
                 <h1 id="command-line-tools">Command Line Tools</h1>
-<p>A command-line interface or command language interpreter (CLI), also known as a terminal, is a means of interacting with a computer program where the user issues commands to the program in the form of successive lines of text (command lines).</p>
+<p>A command-line interface or command language interpreter (CLI), also known as a terminal, is a means of interacting with a computer program where the user issues commands to the program in the form of successive lines of text.</p>
 <p>Throughout the course we will emphasize use of the terminal and executing commands within it as our modus operandi.</p>
-<h2 id="windows-users">Windows Users</h2>
-<p>So that we can work as closely as possible to the Mac and Linux users we will install <a href="https://www.cygwin.com/">Cygwin</a>.</p>
-<ul>
-<li>Download Cygwin <a href="https://cygwin.com/install.html">here</a> and use the graphical installer. Accept all the default options.</li>
-<li>Choose any server from which to download cygwin and packages when prompted. </li>
-<li>Verify your installation by opening Cygwin. When it opens you should see a black box with some text that looks like:</li>
-</ul>
-<pre><code class="bash">userName@computerName: ~$
-</code></pre>
-
-<p>i.e. for Uli he sees:</p>
-<pre><code class="bash">ubergmann@dhcp-wlan-uzh-10-12-130-xxx: ~$
-</code></pre>
-
-<p>We will explain what all this means in the first day or so of the course.</p>
-<div class="admonition tip">
-<p class="admonition-title">Why Cygwin</p>
-<ul>
-<li>
-<p>We will uses Cygwin as our command line tool, and unlike other Windows shells such as PowerShell it uses Unix syntax.</p>
-</li>
-<li>
-<p>Anywhere throughout the remainder of the installation guide where we suggest you to enter a command into a terminal, enter the text-based command into your Cygwin terminal followed by pressing <code>Return</code>, for example:</p>
-<pre><code>userName@computerName: ~$ whoami
-</code></pre>
-</li>
-</ul>
-<p>Should return your username.</p>
-</div>
-<div class="admonition danger">
-<p class="admonition-title">Do Not Delete the Install File</p>
-<ul>
-<li><strong>Do not delete the setup-x86_64.exe file.</strong> It needs to be kept so that we can add on some additional packages to use in the course.</li>
-</ul>
-</div>
 <h2 id="mac-users">Mac Users</h2>
 <p>A command line interface comes already installed with OSX.</p>
-<p>You will need to install some other software from the terminal thoughout the course, so it will be useful to install some additional "command line tools" now:</p>
+<p>You will need to install some other software from the terminal thoughout the course, so it will be useful to install some additional "command line tools" now.</p>
+<h3 id="opening-a-terminal-session">Opening a Terminal Session</h3>
+<p>To open a terminal session:</p>
 <ul>
-<li>First we want to install X-code command line tools. Open a terminal by searching for it with spotlight, <code>cmd + spacebar</code> then type terminal and press <code>Return</code> when it appears. Then, copy and paste the following</li>
+<li>Open spotlight with <code>cmd + spacebar</code></li>
+<li>Type in 'terminal'</li>
+<li>When the terminal appears, open it.</li>
 </ul>
-<pre><code class="bash">xcode-select --install
-</code></pre>
+<h3 id="installing-new-tools-for-the-terminal">Installing New Tools for the Terminal</h3>
+<h4 id="the-x-code-tools">The X-code Tools</h4>
+<p>We want to install 'X-code command line tools'. Copy and paste the following and press <code>Return</code></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>xcode-select --install
+</pre></div>
+</td></tr></table>
 
-<p>If you get an answer that the command line tools are already installed, you can just continue to the next step.</p>
+<p>If you get a message that the command line tools are already installed, you can continue to the next step.</p>
+<h4 id="homebrew-package-manager">Homebrew Package Manager</h4>
+<p>Homebrew is a package manager for Mac.</p>
+<p>Install Homebrew by opening a terminal and pasting the following command:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ruby -e <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</td></tr></table>
+
+<p>Verify that Homebrew installed correctly, enter the following into your terminal:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>brew doctor
+</pre></div>
+</td></tr></table>
+
+<p>And you should see the following output:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Your system is ready to brew
+</pre></div>
+</td></tr></table>
+
+<p>Before continuing, lets be sure everything in Homebrew is up to date by entering the following:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>brew upgrade
+</pre></div>
+</td></tr></table>
+
+<h3 id="installing-packages-with-homebrew">Installing Packages with Homebrew</h3>
+<p>Now we can use homebrew to easily install software.  We need some basic system tools for some of the programs we will install later. </p>
+<p>In particular we need:</p>
 <ul>
-<li>Second,  install Homebrew by opening a terminal and pasting the following command:</li>
+<li><code>libxml2</code></li>
+<li><code>openssl</code></li>
+<li><code>libgit2</code></li>
 </ul>
-<pre><code class="bash">ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-</code></pre>
+<p>Most of these are already installed, but we need updates of these packages.
+For each of these packages enter:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>brew reinstall pkg-name
+</pre></div>
+</td></tr></table>
 
+<p>i.e. <code>brew reinstall libxml2</code>.</p>
+<p>If you get a message that the package you are trying to reinstall is not yet installed, try <code>brew install pkg-name</code> instead.</p>
+<h3 id="linking-packages-to-a-terminal-session">Linking Packages to a Terminal Session</h3>
+<p>We need to ensure that our terminal session has access to what we installed. 
+To do this we add some extra lines to our bash profile (we will discuss what this means in class - do what we say for now):</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">echo</span> <span class="s1">&#39;export PATH=&quot;/usr/local/opt/libxml2/bin:$PATH&quot;&#39;</span> &gt;&gt; ~/.bash_profile
+<span class="nb">echo</span> <span class="s1">&#39;export PATH=&quot;/usr/local/opt/openssl/bin:$PATH&quot;&#39;</span> &gt;&gt; ~/.bash_profile
+<span class="nb">source</span> .bash_profile
+</pre></div>
+</td></tr></table>
+
+<h2 id="linux-windows-users">Linux &amp; Windows Users</h2>
 <ul>
-<li>To verify that Homebrew installed correctly, enter the following into your terminal</li>
+<li>Linux Users: Open a terminal session with <code>Crtl</code> + <code>Alt</code> + <code>T</code>.</li>
+<li>Windows Users: Open the Ubuntu Terminal as we described <a href="/windows-wsl/#installing-windows-terminal">here</a></li>
 </ul>
-<pre><code class="bash">brew doctor
-</code></pre>
+<p>Copy the following command into terminal and press <code>Return</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-get update
+sudo apt-get install libcurl4-gnutls-dev librtmp-dev
+</pre></div>
+</td></tr></table>
 
-<p>And you should see the following output</p>
-<pre><code class="bash">Your system is ready to brew
-</code></pre>
-
-<ul>
-<li>Now we can use homebrew to easily install software. To use the current R version 3.5.1, we want to make sure you have some basic system tools that some packages require. Let's (re)install them real quick. First <code>libxml2</code>:</li>
-</ul>
-<pre><code class="bash">brew reinstall libxml2
-</code></pre>
-
-<p>If you system tells you that it is not yet installed, then try  <code>brew install libxml2</code> instead.</p>
-<p>We also want to link this so that terminal finds it later:</p>
-<pre><code class="bash">echo 'export PATH=&quot;/usr/local/opt/libxml2/bin:$PATH&quot;' &gt;&gt; ~/.bash_profile
-</code></pre>
-
-<ul>
-<li>Second, we also need <code>openssl</code>:</li>
-</ul>
-<pre><code class="bash">brew reinstall openssl
-</code></pre>
-
-<p>Again, if it is already installed, then use <code>brew install openssl</code> instead.</p>
-<p>Again, we need it to link to terminal:</p>
-<pre><code>echo 'export PATH=&quot;/usr/local/opt/openssl/bin:$PATH&quot;' &gt;&gt; ~/.bash_profile
-</code></pre>
-
-<ul>
-<li>Finally, we need <code>libgit2</code>:</li>
-</ul>
-<pre><code class="bash">brew install libgit2
-</code></pre>
-
-<p>If terminal tells you it is not yet installed, then go for <code>brew reinstall libgit2</code></p>
-<h2 id="linux-users">Linux Users</h2>
-<p>To use the current R version, wee need to install some system tools. For this open a terminal session with <code>Crtl</code> + <code>Alt</code> + <code>T</code>.</p>
-<ul>
-<li>Now copy the following command into terminal and press <code>Enter</code>:</li>
-</ul>
-<pre><code class="bash">  sudo apt-get install libcurl4-gnutls-dev librtmp-dev
-</code></pre>
-
-<ul>
-<li>After the installation succeeded successfully repeat this one-by-one with the following two other commands:</li>
-</ul>
-<pre><code class="bash">sudo apt-get install libxml2-dev
+<p>After the installation succeeded successfully repeat this one-by-one with the following two other commands:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-get install libxml2-dev
 sudo apt-get install libssl-dev
-</code></pre>
+sudo apt-get install gdebi-core
+</pre></div>
+</td></tr></table>
+
+<div class="admonition tip">
+<p class="admonition-title">Windows Users: Copy and Paste</p>
+<p>The 'tradtional' <code>Ctrl + C</code> and <code>Ctrl + v</code> doesn't work with you terminal. 
+To save manually writing stuff in, highlight the text with you cursor, and then in the terminal use your mouses right-click to paste it in.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Windows Users: Library Installation</p>
+<p>At some point in the install process you may see a screen like this one:</p>
+<p><img src="../img/misc-windows/96-lib-installer.jpg" class="center" height = "500"></p>
+<p>Here you need to make a choice, which you do by using the left and right arrows followed by <code>Return</code>.
+Lachlan chose, 'No' - but you can safely choose yes without your computer burning down.</p>
+<p>Whenever you get these kinds of screens, you can scroll up and down with the up and down buttons if needed and make decisions by selecting a choice as described above.</p>
+</div>
               
             </div>
           </div>

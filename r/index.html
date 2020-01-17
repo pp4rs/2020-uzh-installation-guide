@@ -85,11 +85,6 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../snakemake/">Build Tools</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../webscraping_drivers/">Webscraping</a>
 	    </li>
           
@@ -107,13 +102,19 @@
     
         <ul>
         
-            <li><a class="toctree-l3" href="#installing-r">Installing R</a></li>
+            <li><a class="toctree-l3" href="#installing-r-for-mac-users">Installing R for Mac Users</a></li>
         
-            <li><a class="toctree-l3" href="#installing-rstudio">Installing RStudio</a></li>
+            <li><a class="toctree-l3" href="#installing-r-for-linux-windows-users">Installing R for Linux &amp; Windows Users</a></li>
         
-            <li><a class="toctree-l3" href="#verifying-your-install-of-r">Verifying your Install of R</a></li>
+            <li><a class="toctree-l3" href="#verifying-your-install-of-r-all-users">Verifying your Install of R - All Users</a></li>
         
-            <li><a class="toctree-l3" href="#installing-additional-r-packages">Installing Additional R Packages</a></li>
+            <li><a class="toctree-l3" href="#installing-rstudio-for-mac-users">Installing RStudio for Mac Users</a></li>
+        
+            <li><a class="toctree-l3" href="#installing-rstudio-for-linux-users">Installing RStudio for Linux Users</a></li>
+        
+            <li><a class="toctree-l3" href="#installing-rstudio-for-windows-users">Installing RStudio for Windows Users</a></li>
+        
+            <li><a class="toctree-l3" href="#additional-r-packages-all-users">Additional R Packages - All Users</a></li>
         
         </ul>
     
@@ -128,7 +129,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../finish.md">The Finish Line!</a>
+    <a class="" href="../finish-line/">The Finish Line!</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -181,56 +182,148 @@
                 <h1 id="r-and-rstudio">R and RStudio</h1>
 <p>R is a language for statistical computing and graphics.
 R's use in the data science and econometrics community has taken off over recent years and (at a bare minimum) should be considered as an open source replacement to Stata.</p>
-<h2 id="installing-r">Installing R</h2>
+<p>RStudio provides an easy to work with graphical interface to R, and its format should feel familiar to Stata and Matlab users.</p>
+<h2 id="installing-r-for-mac-users">Installing R for Mac Users</h2>
 <p>Go to the <a href="https://cran.r-project.org/">R homepage</a> and download the installer for your operating system.</p>
-<p>The current version for Mac and Windows is <code>R version 3.5.1</code> and for Linux it is <code>R version 3.4.1</code></p>
-<h2 id="installing-rstudio">Installing RStudio</h2>
-<p>RStudio provides an easy to work with interface to R, and its format should feel familiar to Stata and Matlab users.</p>
-<p>Download and install the free version of RStudio for your operating system from <a href="https://www.rstudio.com/products/rstudio/download3/">here</a>.</p>
-<h2 id="verifying-your-install-of-r">Verifying your Install of R</h2>
+<p>The current version for Mac and Windows is <code>R version 3.6.2</code>.</p>
+<p>Once you have installed R, <a href="#verifying-your-install-of-r-all-users">verify your install</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Why Not Install via Homebrew?<p>There is conflicting views on Homebrews installation of <code>R</code>.
+Because we haven't tried it to ensure no problems will emerge, we recommend going with the installation based on the CRAN distributed package.</p>
+</p>
+</div>
+<h2 id="installing-r-for-linux-windows-users">Installing R for Linux &amp; Windows Users</h2>
+<p>First, we need to add a repository so that our operating system knows where to install the most recent version of <code>R</code> from.</p>
+<p>Enter the following into the terminal and press <code>Return</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo add-apt-repository <span class="s1">&#39;deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/&#39;</span>
+</pre></div>
+</td></tr></table>
+
+<p>Now, update to get the package manifests from the new repository:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-get update
+</pre></div>
+</td></tr></table>
+
+<p><strong>Note:</strong> if you are using a different version of Linux or Ubuntu - i.e. not Ubuntu 18.04 LTS, check out <a href="https://cran.r-project.org/bin/linux/">this site</a> to correctly modify the entry above. </p>
+<p>We can now install <code>R</code> as from the terminal by entering the following:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-get install r-base r-base-dev
+</pre></div>
+</td></tr></table>
+
+<p>Install the multi-threaded OpenBlas library to get higher performance for linear algebra operations:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-get install libopenblas-base
+</pre></div>
+</td></tr></table>
+
+<p>Now, <a href="#verifying-your-install-of-r-all-users">verify your install</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">R on WSL Ubuntu vs. R on native Windows<p>Even if you already have a version of <code>R</code> installed on your Windows machine, you need to install <code>R</code> inside the WSL Ubuntu 18.04 environment we have set up. 
+Your Ubuntu terminal cannot see everything you have on your native Windows installation.</p>
+</p>
+</div>
+<h2 id="verifying-your-install-of-r-all-users">Verifying your Install of R - All Users</h2>
 <p>Open a terminal and enter:</p>
-<pre><code class="bash">R --version
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>R --version
+</pre></div>
+</td></tr></table>
 
 <p>followed by pressing <code>Return</code>. The expected return begins with:</p>
-<pre><code class="bash">R version 3.x.1 (201x-xx-xx) -- &quot;Some Funky Name&quot;
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>R version <span class="m">3</span>.6.x <span class="o">(</span><span class="m">2019</span>-xx-xx<span class="o">)</span> -- <span class="s2">&quot;Some Funky Name&quot;</span>
+</pre></div>
+</td></tr></table>
 
-<p>You should see the version corresponding to the one chosen on the website.</p>
-<div class="admonition danger">
-<p class="admonition-title"> Windows PATH Setting redux</p>
-<p>If you want R available from the command line (it is by default for Mac and Linux), we again need to update our PATH settings.</p>
-<p>Right-click on Computer. Then go to "Properties" and select the tab "Advanced System settings". Choose "Environment Variables" and select <code>Path</code> from the list of system variables.</p>
-<p>Choose <code>Edit</code>.</p>
-<p><strong>Windows 7 and 8 machines:</strong>
-If you accepted all defaults during your installation, and didn't have any other non-default setting prior to starting this guide, copy and paste the following string without spaces at the start or end:</p>
-<pre><code>    ;C:\Program Files\R\R-3.5.1\bin
-</code></pre>
-<p><strong>Windows 10 machines:</strong>
-Click <code>New</code> and paste the following string:</p>
-<pre><code>    C:\Program Files\R\R-3.5.1\bin
-</code></pre>
-<p>Click on <code>OK</code> as often as needed.</p>
-<p>After you have done this, open a <strong>new</strong> terminal and try and verify your install.</p>
-</div>
-<h2 id="installing-additional-r-packages">Installing Additional R Packages</h2>
+<p>Now proceed to install RStudio.</p>
+<h2 id="installing-rstudio-for-mac-users">Installing RStudio for Mac Users</h2>
+<p>We can install RStudio with Homebrew:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>brew cask install rstudio
+</pre></div>
+</td></tr></table>
+
+<p>To see if it installed correctly, try and open RStudio from spotlight - there's not simple verification from the terminal.</p>
+<h2 id="installing-rstudio-for-linux-users">Installing RStudio for Linux Users</h2>
+<p>Download the Latest Version of RStudio:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5033-amd64.deb
+</pre></div>
+</td></tr></table>
+
+<p>Install it:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo gdebi rstudio-1.2.5033-amd64.deb
+</pre></div>
+</td></tr></table>
+
+<p>To see if it installed correctly, try and open RStudio from the GNOME menu - there's not simple verification from the terminal.</p>
+<h2 id="installing-rstudio-for-windows-users">Installing RStudio for Windows Users</h2>
+<p>Using RStudio together with the R that we installed into our WSL Ubuntu setup is a little trickier - because we don't have access to a graphical interface.</p>
+<p>The trick will be to install the server version of RStudio. 
+It may sound slightly daunting - but it is actually quite easy!</p>
+<p>First, we download the most recent version of RStudio Server for Ubuntu 18 (see <a href="https://rstudio.com/products/rstudio/download-server/debian-ubuntu/">here</a>).
+Enter the following into your terminal and press <code>Return</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.2.5033-amd64.deb
+</pre></div>
+</td></tr></table>
+
+<p>Now install it by entering this command and hitting <code>Return</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo gdebi rstudio-server-1.2.5033-amd64.deb
+</pre></div>
+</td></tr></table>
+
+<p>Now that we have RStudio installed on our subsystem, how can we use it?</p>
+<p>In the Ubuntu terminal enter the following text and press <code>Return</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo rstudio-server start
+</pre></div>
+</td></tr></table>
+
+<p>Now open a web browser, and go to the following address:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>http://localhost:8787/
+</pre></div>
+</td></tr></table>
+
+<p>which will take you to a log in page. </p>
+<p>Log in using the username and password for your Ubuntu terminal that we set up at the beginning.</p>
+<p>After logging in successfully you have access to the RStudio that you installed in your Ubuntu subsystem.</p>
+<p>To log out, click on the log out button in the top right corner.</p>
+<p>To stop the RStudio server from running (logging out doesn't stop it), enter <code>rstudio stop</code> into your terminal.</p>
+<h2 id="additional-r-packages-all-users">Additional R Packages - All Users</h2>
 <p>We will need some additional libraries to conduct our statistical analysis. Proceed as follows:</p>
 <ul>
 <li>Open RStudio</li>
 <li>In the <strong>console</strong>, copy and paste the following:</li>
 </ul>
-<pre><code class="r">uzh_progecon &lt;- c(  &quot;reshape&quot;, &quot;rmarkdown&quot;,
-                    &quot;plm&quot;, &quot;Hmisc&quot;, &quot;sandwich&quot;,
-                    &quot;Ecdat&quot;, &quot;stargazer&quot;, &quot;knitr&quot;,
-                    &quot;httr&quot;, &quot;rvest&quot;, &quot;xml2&quot;,
-                    &quot;xtable&quot;,&quot;tidyverse&quot;, &quot;AER&quot;,
-                    &quot;rdd&quot;, &quot;car&quot;, &quot;aod&quot;, &quot;lmtest&quot;,
-                    &quot;lfe&quot;, &quot;nlme&quot;, &quot;lme4&quot;,
-                    &quot;erer&quot;, &quot;margins&quot;,
-                    &quot;multiwayvcov&quot;, &quot;RSQLite&quot;, &quot;dbplyr&quot;)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">to_install</span> <span class="o">&lt;-</span><span class="nf">c</span><span class="p">(</span> <span class="s">&quot;reshape&quot;</span><span class="p">,</span> <span class="s">&quot;rmarkdown&quot;</span><span class="p">,</span>
+                <span class="s">&quot;plm&quot;</span><span class="p">,</span> <span class="s">&quot;Hmisc&quot;</span><span class="p">,</span> <span class="s">&quot;sandwich&quot;</span><span class="p">,</span>
+                <span class="s">&quot;Ecdat&quot;</span><span class="p">,</span> <span class="s">&quot;stargazer&quot;</span><span class="p">,</span> <span class="s">&quot;knitr&quot;</span><span class="p">,</span>
+                <span class="s">&quot;httr&quot;</span><span class="p">,</span> <span class="s">&quot;rvest&quot;</span><span class="p">,</span> <span class="s">&quot;xml2&quot;</span><span class="p">,</span>
+                <span class="s">&quot;xtable&quot;</span><span class="p">,</span><span class="s">&quot;tidyverse&quot;</span><span class="p">,</span> <span class="s">&quot;AER&quot;</span><span class="p">,</span>
+                <span class="s">&quot;rdd&quot;</span><span class="p">,</span> <span class="s">&quot;car&quot;</span><span class="p">,</span> <span class="s">&quot;aod&quot;</span><span class="p">,</span> <span class="s">&quot;lmtest&quot;</span><span class="p">,</span>
+                <span class="s">&quot;lfe&quot;</span><span class="p">,</span> <span class="s">&quot;nlme&quot;</span><span class="p">,</span> <span class="s">&quot;lme4&quot;</span><span class="p">,</span>
+                <span class="s">&quot;erer&quot;</span><span class="p">,</span> <span class="s">&quot;margins&quot;</span><span class="p">,</span> <span class="s">&quot;multiwayvcov&quot;</span>
+                <span class="s">&quot;lubridate&quot;</span><span class="p">,</span> <span class="s">&quot;haven&quot;</span><span class="p">,</span> <span class="s">&quot;rddensity&quot;</span><span class="p">,</span>
+                <span class="s">&quot;rdrobust&quot;</span><span class="p">,</span> <span class="s">&quot;ivpack&quot;</span><span class="p">,</span> <span class="s">&quot;readxl&quot;</span><span class="p">,</span>
+                <span class="s">&quot;ggrepel&quot;</span><span class="p">,</span> <span class="s">&quot;multiwayvcov&quot;</span><span class="p">,</span> <span class="s">&quot;RSQLite&quot;</span><span class="p">,</span> 
+                <span class="s">&quot;dbplyr&quot;</span><span class="p">,</span> <span class="s">&quot;devtools&quot;</span><span class="p">,</span> <span class="s">&quot;blogdown&quot;</span><span class="p">,</span> 
+                <span class="s">&quot;rticles&quot;</span><span class="p">,</span> <span class="s">&quot;packrat&quot;</span><span class="p">,</span> <span class="s">&quot;here&quot;</span><span class="p">,</span>
+                <span class="s">&quot;optparse&quot;</span><span class="p">,</span> <span class="s">&quot;rlist&quot;</span>
+                <span class="p">)</span>
 
-install.packages(uzh_progecon)
-</code></pre>
+<span class="nf">install.packages</span><span class="p">(</span><span class="n">to_install</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <ul>
 <li>If you are asked if you want to install packages that need compilation, type <code>y</code> followed by <code>Return</code> to confirm this.</li>
@@ -239,6 +332,25 @@ install.packages(uzh_progecon)
 </ul>
 </li>
 </ul>
+<p>Note that many dependencies get installed along the way.</p>
+<p>We also want some packages to be installed from Github - these typically still under development:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">from_gh</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;ddsjoberg/gtsummary&quot;</span><span class="p">,</span> 
+             <span class="s">&quot;vincentarelbundock/modelsummary&quot;</span><span class="p">,</span> 
+             <span class="s">&quot;rstudio/fontawesome&quot;</span><span class="p">,</span> 
+             <span class="s">&quot;rstudio/gt&quot;</span><span class="p">,</span>
+             <span class="s">&quot;rstudio/renv&quot;</span>
+             <span class="p">)</span>
+
+<span class="n">devtools</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="n">from_gh</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
               
             </div>
           </div>
