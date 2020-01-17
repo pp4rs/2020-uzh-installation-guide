@@ -114,6 +114,16 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../rstudio/">RStudio</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../r-packages/">R Packages</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="../pandoc/">LaTeX & Pandoc</a>
 	    </li>
           
@@ -169,7 +179,11 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="web-scraping-using-an-automated-browser">Web Scraping Using an Automated Browser</h1>
+                <!-- markdownlint-disable MD024 -->
+
+<!-- see https://github.com/DavidAnson/markdownlint for code to enable or disable rules -->
+
+<h1 id="web-scraping-using-an-automated-browser">Web Scraping Using an Automated Browser</h1>
 <p>Sometimes when we scrape the web, we need to automate our computer to open a web browser to gather information from each page.
 This is especially true when the site we want to scrape has content that is loaded dynamically with javascript.</p>
 <p>We will install one package to help us here: Chromedriver</p>
@@ -184,7 +198,7 @@ Enter the following into the terminal and hit <code>Return</code>:</p>
 </td></tr></table>
 
 <p>Verify the install:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">google</span><span class="o">-</span><span class="n">chrome</span> <span class="c1">--version</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>google-chrome --version
 </pre></div>
 </td></tr></table>
 
@@ -194,7 +208,7 @@ Enter the following into the terminal and hit <code>Return</code>:</p>
 </td></tr></table>
 
 <h3 id="chromedriver">Chromedriver</h3>
-<p>Now we install some software than can control a Google Chrome browser. 
+<p>Now we install some software than can control a Google Chrome browser.
 It is called Chromedriver.
 Again, install via Homebrew:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>brew cask install chromedriver
@@ -202,7 +216,7 @@ Again, install via Homebrew:</p>
 </td></tr></table>
 
 <p>Verify your install.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">chromedriver</span> <span class="c1">--version</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>chromedriver --version
 </pre></div>
 </td></tr></table>
 
@@ -229,7 +243,7 @@ sudo apt-get install -f
 </td></tr></table>
 
 <p>Verify the install:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">google</span><span class="o">-</span><span class="n">chrome</span> <span class="c1">--version</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>google-chrome --version
 </pre></div>
 </td></tr></table>
 

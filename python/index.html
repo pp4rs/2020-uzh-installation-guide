@@ -116,6 +116,16 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../rstudio/">RStudio</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../r-packages/">R Packages</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="../pandoc/">LaTeX & Pandoc</a>
 	    </li>
           
@@ -201,7 +211,7 @@ Do you approve the license terms? <span class="o">[</span>yes<span class="p">|</
 </td></tr></table>
 
 <p>Press <code>Return</code> until you reach the end, and type 'yes'.</p>
-<h3 id="making-anaconda-python-accessible-from-the-terminal">Making Anaconda Python Accessible from the Terminal.</h3>
+<h3 id="making-anaconda-python-accessible-from-the-terminal">Making Anaconda Python Accessible from the Terminal</h3>
 <p>By default, Mac uses a default install of Python inside the terminal.
 We want to change that.</p>
 <p>Enter the following in the terminal and press <code>Return</code>:</p>
@@ -210,7 +220,7 @@ We want to change that.</p>
 </td></tr></table>
 
 <p>Then, reload the terminal environment:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">source</span> <span class="p">.</span><span class="n">bash_profile</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">source</span> .bash_profile
 </pre></div>
 </td></tr></table>
 
@@ -258,23 +268,29 @@ To do this press <code>Return</code> until you reach the end, and type 'yes'.</p
 installation finished.
 Do you wish the installer to prepend the Anaconda3 install location
 to PATH in your /home/lachlan/.bashrc ? <span class="o">[</span>yes<span class="p">|</span>no<span class="o">]</span>
-&gt;&gt;&gt; 
+&gt;&gt;&gt;
 </pre></div>
 </td></tr></table>
 
 <p>Type 'yes'.</p>
 <p>Now we need to refresh our terminal settings, so type the following and press return:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">source</span> <span class="o">~/</span><span class="p">.</span><span class="n">bashrc</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">source</span> ~/.bashrc
 </pre></div>
 </td></tr></table>
 
 <p>Now proceed to <a href="#verify-installation">verify your install</a>.</p>
+<!-- markdownlint-capture -->
+
+<!-- markdownlint-disable -->
+
 <div class="admonition tip">
 <p class="admonition-title">Updating the Anaconda Install</p>
 <p>In the future, if you want to find the most up to date Anaconda installer, go to the following website:</p>
 <p>https://repo.anaconda.com/archive/</p>
 <p>and find the most recent Anaconda3 installer for Linux-x86_64</p>
 </div>
+<!-- markdownlint-restore -->
+
 <h2 id="verify-installation">Verify Installation</h2>
 <p>To verify that the correct version of Python has been installed, usually we would follow the <code>programName --version</code> logic from before:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python --version
@@ -286,8 +302,8 @@ to PATH in your /home/lachlan/.bashrc ? <span class="o">[</span>yes<span class="
 </pre></div>
 </td></tr></table>
 
-<p>which tells us that Python is installed. 
-But, because most operating systems thesedays have some version of Python installed, this doesn't guarantee that the Anaconda version is available for us to use from the terminal.</p>
+<p>which tells us that Python is installed.
+But, because most operating systems these days have some version of Python installed, this doesn't guarantee that the Anaconda version is available for us to use from the terminal.</p>
 <p>To check, initiate Python by entering the following into a terminal and pressing <code>Return</code>:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python
 </pre></div>
@@ -309,14 +325,19 @@ To quit the Python session we just opened, type the following at the <code>&gt;&
 </pre></div>
 </td></tr></table>
 
-<p>and you will return to your terminal. 
+<p>and you will return to your terminal.
 This was successful if you now see a <code>$</code> rather than the <code>&gt;&gt;&gt;</code>.</p>
+<!-- markdownlint-capture -->
+
+<!-- markdownlint-disable -->
+
 <div class="admonition tip">
 <p class="admonition-title">Python 2 vs Python 3</p>
 <p>Python 2 and 3 are incompatible in syntax. If you had Python 2 previously installed on your machine, you might have seen <code>Python 2.x.x</code> above. In that case try typing</p>
 <p><code>python3 --version</code></p>
 <p>instead. Now you should see a message like the one above and are good to go for the course.</p>
 </div>
+<!-- markdownlint-restore -->
               
             </div>
           </div>

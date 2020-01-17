@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Automation with Snakemake - Programming Practices for Research in Econonomics</title>
+  <title>RStudio - Programming Practices for Research in Econonomics</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Automation with Snakemake";
-    var mkdocs_page_input_path = "snakemake.md";
+    var mkdocs_page_name = "RStudio";
+    var mkdocs_page_input_path = "rstudio.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -88,21 +88,9 @@
     <a class="" href="../webscraping_drivers/">Webscraping</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">Automation with Snakemake</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#snakemake">Snakemake</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#all-users">All Users</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../snakemake/">Automation with Snakemake</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -110,9 +98,25 @@
     <a class="" href="../r/">R</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../rstudio/">RStudio</a>
+    <a class="current" href="./">RStudio</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#rstudio">RStudio</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#installing-rstudio-for-mac-users">Installing RStudio for Mac Users</a></li>
+        
+            <li><a class="toctree-l3" href="#installing-rstudio-for-linux-users">Installing RStudio for Linux Users</a></li>
+        
+            <li><a class="toctree-l3" href="#installing-rstudio-for-windows-users">Installing RStudio for Windows Users</a></li>
+        
+        </ul>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -167,7 +171,7 @@
     
       
     
-    <li>Automation with Snakemake</li>
+    <li>RStudio</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -177,39 +181,58 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="snakemake">Snakemake</h1>
-<p>Snakemake is an easy to use workflow management system.
-It will allow us to control the execution of a set scripts by by running them from the command line.
-We will use make to automate the execution of our research projects with a "single click" so that our entire work flow is reproducible.</p>
-<div class="admonition tip">
-<p class="admonition-title">Why a Tool to Manage Project's Execution?</p>
-<p>We strongly believe in using build tools to manage the execution of a research project - and we hope that by the end of the course you do too.</p>
-<p>Some reasons we push this topic are:</p>
-<ul>
-<li>Your workflow / order of execution is explicitly documented.</li>
-<li>Each time you run Snakemake, it only executes each script if the output is expected to be different from the last time your ran it. That is, it runs 'partial builds.'</li>
-<li>Its written in Python, which minimizes the learning curve needed to pick up the essentials relatively small</li>
-<li>It was designed for academic/professional research (in Bioinformatics) so it feels more intuitive than most alternatives for our desired audience.</li>
-</ul>
-</div>
-<p>Snakemake is a python package - so we can install using the default python installer, pip.</p>
-<h2 id="all-users">All Users</h2>
-<p>In a terminal window enter the command:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install snakemake
+                <h1 id="rstudio">RStudio</h1>
+<p>RStudio provides an easy to work with graphical interface to R, and its format should feel familiar to Stata and Matlab users.</p>
+<h2 id="installing-rstudio-for-mac-users">Installing RStudio for Mac Users</h2>
+<p>We can install RStudio with Homebrew:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>brew cask install rstudio
 </pre></div>
 </td></tr></table>
 
-<p>followed by pressing the <code>Return</code> key.</p>
-<p>Verify that your installation worked correctly by entering</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>snakemake --version
+<p>To see if it installed correctly, try and open RStudio from spotlight - there's not simple verification from the terminal.</p>
+<h2 id="installing-rstudio-for-linux-users">Installing RStudio for Linux Users</h2>
+<p>Download the Latest Version of RStudio:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5033-amd64.deb
 </pre></div>
 </td></tr></table>
 
-<p>into a terminal and pressing <code>Return.</code></p>
-<p>The expected output is the current version on the software, which should be greater than</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="m">5</span>.9.1
+<p>Install it:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo gdebi rstudio-1.2.5033-amd64.deb
 </pre></div>
 </td></tr></table>
+
+<p>To see if it installed correctly, try and open RStudio from the GNOME menu - there's not simple verification from the terminal.</p>
+<h2 id="installing-rstudio-for-windows-users">Installing RStudio for Windows Users</h2>
+<p>Using RStudio together with the R that we installed into our WSL Ubuntu setup is a little trickier - because we don't have access to a graphical interface.</p>
+<p>The trick will be to install the server version of RStudio.
+It may sound slightly daunting - but it is actually quite easy!</p>
+<p>First, we download the most recent version of RStudio Server for Ubuntu 18 (see <a href="https://rstudio.com/products/rstudio/download-server/debian-ubuntu/">here</a>).
+Enter the following into your terminal and press <code>Return</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.2.5033-amd64.deb
+</pre></div>
+</td></tr></table>
+
+<p>Now install it by entering this command and hitting <code>Return</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo gdebi rstudio-server-1.2.5033-amd64.deb
+</pre></div>
+</td></tr></table>
+
+<p>Now that we have RStudio installed on our subsystem, how can we use it?</p>
+<p>In the Ubuntu terminal enter the following text and press <code>Return</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo rstudio-server start
+</pre></div>
+</td></tr></table>
+
+<p>Now open a web browser, and go to the following address:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>http://localhost:8787/
+</pre></div>
+</td></tr></table>
+
+<p>which will take you to a log in page.</p>
+<p>Log in using the username and password for your Ubuntu terminal that we set up at the beginning.</p>
+<p>After logging in successfully you have access to the RStudio that you installed in your Ubuntu subsystem.</p>
+<p>To log out, click on the log out button in the top right corner.</p>
+<p>To stop the RStudio server from running (logging out doesn't stop it), enter <code>rstudio stop</code> into your terminal.</p>
               
             </div>
           </div>
@@ -217,10 +240,10 @@ We will use make to automate the execution of our research projects with a "sing
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../r/" class="btn btn-neutral float-right" title="R">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../r-packages/" class="btn btn-neutral float-right" title="R Packages">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../webscraping_drivers/" class="btn btn-neutral" title="Webscraping"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../r/" class="btn btn-neutral" title="R"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -246,10 +269,10 @@ We will use make to automate the execution of our research projects with a "sing
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../webscraping_drivers/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../r/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../r/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../r-packages/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

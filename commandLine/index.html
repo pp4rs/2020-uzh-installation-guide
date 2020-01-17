@@ -114,6 +114,16 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../rstudio/">RStudio</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../r-packages/">R Packages</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="../pandoc/">LaTeX & Pandoc</a>
 	    </li>
           
@@ -174,11 +184,11 @@
 <p>Throughout the course we will emphasize use of the terminal and executing commands within it as our modus operandi.</p>
 <h2 id="mac-users">Mac Users</h2>
 <p>A command line interface comes already installed with OSX.</p>
-<p>You will need to install some other software from the terminal thoughout the course, so it will be useful to install some additional "command line tools" now.</p>
+<p>You will need to install some other software from the terminal throughout the course, so it will be useful to install some additional "command line tools" now.</p>
 <h3 id="opening-a-terminal-session">Opening a Terminal Session</h3>
 <p>To open a terminal session:</p>
 <ul>
-<li>Open spotlight with <code>cmd + spacebar</code></li>
+<li>Open spotlight with <code>cmd + space</code></li>
 <li>Type in 'terminal'</li>
 <li>When the terminal appears, open it.</li>
 </ul>
@@ -213,7 +223,7 @@
 </td></tr></table>
 
 <h3 id="installing-packages-with-homebrew">Installing Packages with Homebrew</h3>
-<p>Now we can use homebrew to easily install software.  We need some basic system tools for some of the programs we will install later. </p>
+<p>Now we can use homebrew to easily install software.  We need some basic system tools for some of the programs we will install later.</p>
 <p>In particular we need:</p>
 <ul>
 <li><code>libxml2</code></li>
@@ -229,7 +239,7 @@ For each of these packages enter:</p>
 <p>i.e. <code>brew reinstall libxml2</code>.</p>
 <p>If you get a message that the package you are trying to reinstall is not yet installed, try <code>brew install pkg-name</code> instead.</p>
 <h3 id="linking-packages-to-a-terminal-session">Linking Packages to a Terminal Session</h3>
-<p>We need to ensure that our terminal session has access to what we installed. 
+<p>We need to ensure that our terminal session has access to what we installed.
 To do this we add some extra lines to our bash profile (we will discuss what this means in class - do what we say for now):</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -241,7 +251,7 @@ To do this we add some extra lines to our bash profile (we will discuss what thi
 
 <h2 id="linux-windows-users">Linux &amp; Windows Users</h2>
 <ul>
-<li>Linux Users: Open a terminal session with <code>Crtl</code> + <code>Alt</code> + <code>T</code>.</li>
+<li>Linux Users: Open a terminal session with <code>Ctrl</code> + <code>Alt</code> + <code>T</code>.</li>
 <li>Windows Users: Open the Ubuntu Terminal as we described <a href="/windows-wsl/#installing-windows-terminal">here</a></li>
 </ul>
 <p>Copy the following command into terminal and press <code>Return</code>:</p>
@@ -262,9 +272,15 @@ sudo apt-get install gdebi-core
 
 <div class="admonition tip">
 <p class="admonition-title">Windows Users: Copy and Paste</p>
-<p>The 'tradtional' <code>Ctrl + C</code> and <code>Ctrl + v</code> doesn't work with you terminal. 
-To save manually writing stuff in, highlight the text with you cursor, and then in the terminal use your mouses right-click to paste it in.</p>
+<p>The 'traditional' <code>Ctrl + C</code> and <code>Ctrl + v</code> doesn't work with your terminal because as <code>Ctrl + Key</code> commands have a special meaning.
+To save manually writing stuff in there's two alternatives:
+* Use the 'Linux' copy and paste commands: copy is <code>Ctrl + Shift + C</code> and paste is <code>Ctrl + Shift + V</code>.
+* Highlight the text with you cursor, and then in the terminal use your mouses right-click to paste it in.</p>
 </div>
+<!-- markdownlint-capture -->
+
+<!-- markdownlint-disable -->
+
 <div class="admonition tip">
 <p class="admonition-title">Windows Users: Library Installation</p>
 <p>At some point in the install process you may see a screen like this one:</p>
@@ -273,6 +289,7 @@ To save manually writing stuff in, highlight the text with you cursor, and then 
 Lachlan chose, 'No' - but you can safely choose yes without your computer burning down.</p>
 <p>Whenever you get these kinds of screens, you can scroll up and down with the up and down buttons if needed and make decisions by selecting a choice as described above.</p>
 </div>
+<!-- markdownlint-restore -->
               
             </div>
           </div>

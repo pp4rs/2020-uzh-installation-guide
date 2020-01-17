@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>R Packages - Programming Practices for Research in Econonomics</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "R Packages";
+    var mkdocs_page_input_path = "r-packages.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Programming Practices for Research in Econonomics</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Welcome</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../windows-wsl/">Windows Subsystem</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../commandLine/">Command Line Tools</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../textEditor/">Text Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../gitInstall/">Git</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python/">Python</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python-more/">Python Extras</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../webscraping_drivers/">Webscraping</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../snakemake/">Automation with Snakemake</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../r/">R</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../rstudio/">RStudio</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">R Packages</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#additional-r-packages">Additional R Packages</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#all-users">All Users</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pandoc/">LaTeX & Pandoc</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../finish-line/">The Finish Line!</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../contact/">Contact Us</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../citation-license/">Citation & License</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../acknowledgement/">Acknowledgements</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Programming Practices for Research in Econonomics</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>R Packages</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="additional-r-packages">Additional R Packages</h1>
+<p>We will need some additional libraries to conduct our statistical analysis.</p>
+<h2 id="all-users">All Users</h2>
+<p>Proceed as follows:</p>
+<ul>
+<li>Open RStudio</li>
+<li>In the <strong>console</strong>, copy and paste the following:</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">to_install</span> <span class="o">&lt;-</span><span class="nf">c</span><span class="p">(</span> <span class="s">&quot;reshape&quot;</span><span class="p">,</span> <span class="s">&quot;rmarkdown&quot;</span><span class="p">,</span>
+                <span class="s">&quot;plm&quot;</span><span class="p">,</span> <span class="s">&quot;Hmisc&quot;</span><span class="p">,</span> <span class="s">&quot;sandwich&quot;</span><span class="p">,</span>
+                <span class="s">&quot;Ecdat&quot;</span><span class="p">,</span> <span class="s">&quot;stargazer&quot;</span><span class="p">,</span> <span class="s">&quot;knitr&quot;</span><span class="p">,</span>
+                <span class="s">&quot;httr&quot;</span><span class="p">,</span> <span class="s">&quot;rvest&quot;</span><span class="p">,</span> <span class="s">&quot;xml2&quot;</span><span class="p">,</span>
+                <span class="s">&quot;xtable&quot;</span><span class="p">,</span><span class="s">&quot;tidyverse&quot;</span><span class="p">,</span> <span class="s">&quot;AER&quot;</span><span class="p">,</span>
+                <span class="s">&quot;rdd&quot;</span><span class="p">,</span> <span class="s">&quot;car&quot;</span><span class="p">,</span> <span class="s">&quot;aod&quot;</span><span class="p">,</span> <span class="s">&quot;lmtest&quot;</span><span class="p">,</span>
+                <span class="s">&quot;lfe&quot;</span><span class="p">,</span> <span class="s">&quot;nlme&quot;</span><span class="p">,</span> <span class="s">&quot;lme4&quot;</span><span class="p">,</span>
+                <span class="s">&quot;erer&quot;</span><span class="p">,</span> <span class="s">&quot;margins&quot;</span><span class="p">,</span> <span class="s">&quot;multiwayvcov&quot;</span>
+                <span class="s">&quot;lubridate&quot;</span><span class="p">,</span> <span class="s">&quot;haven&quot;</span><span class="p">,</span> <span class="s">&quot;rddensity&quot;</span><span class="p">,</span>
+                <span class="s">&quot;rdrobust&quot;</span><span class="p">,</span> <span class="s">&quot;ivpack&quot;</span><span class="p">,</span> <span class="s">&quot;readxl&quot;</span><span class="p">,</span>
+                <span class="s">&quot;ggrepel&quot;</span><span class="p">,</span> <span class="s">&quot;multiwayvcov&quot;</span><span class="p">,</span> <span class="s">&quot;RSQLite&quot;</span><span class="p">,</span>
+                <span class="s">&quot;dbplyr&quot;</span><span class="p">,</span> <span class="s">&quot;devtools&quot;</span><span class="p">,</span>
+                <span class="s">&quot;rticles&quot;</span><span class="p">,</span> <span class="s">&quot;here&quot;</span><span class="p">,</span>
+                <span class="s">&quot;optparse&quot;</span><span class="p">,</span> <span class="s">&quot;rlist&quot;</span>
+                <span class="p">)</span>
+
+<span class="nf">install.packages</span><span class="p">(</span><span class="n">to_install</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li>If you are asked if you want to install packages that need compilation, type <code>y</code> followed by <code>Return</code> to confirm this.</li>
+<li>Wait until all the packages have been installed and the you are done.</li>
+<li>It <em>may</em> take a while, so be patient</li>
+</ul>
+<p>Note that many dependencies get installed along the way.</p>
+<p>We also want some packages to be installed from Github - these typically still under development:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">from_gh</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;ddsjoberg/gtsummary&quot;</span><span class="p">,</span>
+             <span class="s">&quot;vincentarelbundock/modelsummary&quot;</span><span class="p">,</span>
+             <span class="s">&quot;rstudio/fontawesome&quot;</span><span class="p">,</span>
+             <span class="s">&quot;rstudio/gt&quot;</span><span class="p">,</span>
+             <span class="s">&quot;rstudio/renv&quot;</span>
+             <span class="p">)</span>
+
+<span class="n">devtools</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="n">from_gh</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../pandoc/" class="btn btn-neutral float-right" title="LaTeX & Pandoc">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../rstudio/" class="btn btn-neutral" title="RStudio"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../rstudio/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../pandoc/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
