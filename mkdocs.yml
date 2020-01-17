@@ -11,6 +11,8 @@ pages:
 - Webscraping: webscraping_drivers.md
 - Automation with Snakemake: snakemake.md
 - R: r.md
+- RStudio: rstudio.md
+- R Packages: r-packages.md
 - LaTeX & Pandoc: pandoc.md
 - The Finish Line!: finish-line.md
 - Contact Us: contact.md
