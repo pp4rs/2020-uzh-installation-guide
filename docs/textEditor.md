@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD033 -->
+<!-- see https://github.com/DavidAnson/markdownlint for code to enable or disable rules -->
 # Motivation
 
 A good text editor lies at the heart of any serious programmer's toolkit: It can do almost anything and makes you much more productive.
@@ -15,7 +17,7 @@ We should get you past the steepest part of the learning curve during the course
 
 Go to the [downloads page](https://www.sublimetext.com/3) and download the live installer for your operating system.-->
 
-# VS Code
+## VS Code
 
 VS Code is a relatively new text editor that works across all three platforms: Linux, Windows and Mac.
 It is built by Microsoft, but is open source, i.e. everyone can see and modify the program's internal code - so it is less nasty on the conscious than some of Microsoft's traditional products.
@@ -43,30 +45,33 @@ Once it has been installed, verify your install by following the instructions [b
 
 ## Installing VS Code on Windows
 
-Go to the VS Code [download page](https://code.visualstudio.com/download), and download the User Installer for Windows. 
+Go to the VS Code [download page](https://code.visualstudio.com/download), and download the User Installer for Windows.
 
 * Once downloaded double click to install.
 * Accept any default options.
 * At the end of the install, launch VS Code (it gives you this option on the last window).
 
-The first time you launch VS code, you will see the following: 
+The first time you launch VS code, you will see the following:
 
 <img src="../img/misc-windows/99-vscode-wsl.jpg" class="center" height = "500">
 
-Where it prompts you to install the 'Remote WSL' extension, choose 'Install'. 
+Where it prompts you to install the 'Remote WSL' extension, choose 'Install'.
 
-Once complete, in your Ubuntu terminal type `code` and press `Return`. 
+Once complete, in your Ubuntu terminal type `code` and press `Return`.
 You should see the following (what appears after `code .`) below:
 
 <img src="../img/misc-windows/98-code-on-ubuntu.jpg" class="center" height = "500">
 
 When the unpacking is complete, VS Code should open.
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
 !!! tip "Windows Defender Firewall"
     You will likely get the following pop-up during the above process:
     <img src="../img/misc-windows/97-allow-access-defender.jpg" class="center" height = "500">
 
     Click 'Allow access' if you do.
+<!-- markdownlint-restore -->
 
 ## Verifying Your Install
 
@@ -94,10 +99,10 @@ VS Code is great straight of the box, but gets even better when we add some addi
 To add extensions:
 
 * Open VS Code
-* Press `Ctrl + Shft + X` to open the Extensions side bar (it opens on the left).
+* Press `Ctrl + Shift + X` to open the Extensions side bar (it opens on the left).
 * Add extensions by:
-    * Searching for them in the Marketplace
-    * When you find them, click `Install`
+  * Searching for them in the Marketplace
+  * When you find them, click `Install`
 
 We recommend the following extensions to be added for this course:
 
