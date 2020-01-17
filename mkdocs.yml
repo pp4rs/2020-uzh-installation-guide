@@ -8,7 +8,6 @@ pages:
 - Git: gitInstall.md
 - Python: python.md
 - Python Extras: python-more.md
-- Build Tools: snakemake.md
 - Webscraping: webscraping_drivers.md
 - Automation with Snakemake: snakemake.md
 - R: r.md
