@@ -1,31 +1,38 @@
+<!-- markdownlint-disable MD033 -->
+<!-- see https://github.com/DavidAnson/markdownlint for code to enable or disable rules -->
+
 # Module:  Installation Guide for Programming Practices for Research Students
 
 ## Meta-Information
 
-*   Module Maintainer: Lachlan Deer (`@lachlandeer`)
-*   Course: [Programming Practices for Research in Economics](https://pp4rs.github.io)
-*   Institute: Dept of Economics, Uni Zurich
-*   Current Version: [Winter 2020 edition](https://pp4rs.github.io/2020-uzh-installation-guide)
+* Module Maintainer: Lachlan Deer (`@lachlandeer`)
+* Course: [Programming Practices for Research in Economics](https://pp4rs.github.io)
+* Institute: Dept of Economics, Uni Zurich
+* Current Version: [Winter 2020 edition](https://pp4rs.github.io/2020-uzh-installation-guide)
 
 ## Building the Site
 
-We use [MkDocs]() to build the the course websites for this course.
+We use [MkDocs](https://www.mkdocs.org/) to build the the course websites for this course.
 
 * Install MkDocs with the following command:
+
 ```{.bash, id:"j29ie3c7"}
 pip install mkdocs
 ```
 
 * Look at a copy of the site served locally on your machine:
+
 ```{.bash, id:"j29ie3c7"}
 mkdocs serve
 ```
+
 * Post the site to github pages using:
+
 ```{.bash, id:"j29ie3c7"}
 mkdocs gh-deploy
 ```
 
-## Want to Contribute?
+## Want to Contribute
 
 * See the contributing guide [here](CONTRIBUTING.md).
 * By contributing you agree to abide by the [Code of Conduct](CONDUCT.md)
@@ -34,12 +41,11 @@ mkdocs gh-deploy
 
 All materials are licensed under a Creative Commons CC-BY-NC-SA license. The license allows you to copy, remix and redistribute any of our publicly available materials, under the condition that you attribute the work (details in the license) and do not make profits from it. More information is available [here](LICENSE.md)
 
-
 ## Suggested Citation
 
 The suggested citation for the course materials is:
 
-```
+``` bash
 Ulrich Bergmann, Matteo Courthoud and Lachlan Deer, 2020, Installation Guide, Programming Practices for Research in Economics, University of Zurich
 ```
 
