@@ -1,7 +1,9 @@
+<!-- markdownlint-disable MD024 -->
+<!-- see https://github.com/DavidAnson/markdownlint for code to enable or disable rules -->
 # LaTeX
 
 LaTeX is a document preparation system for high-quality typesetting most often used for medium-to-large technical or scientific documents.
-Most of you probably have some familarity with LaTeX from your Master's Theses.
+Most of you probably have some familiarity with LaTeX from your Master's Theses.
 
 We may want to build some PDF documents throughout the course using LaTeX - so let's install it.
 
@@ -13,6 +15,7 @@ Enter the following into the terminal:
 ```bash
 brew cask install mactex
 ```
+
 ## LaTeX Install for Linux & Windows
 
 LaTeX can be installed from the terminal by entering the following command and pressing `Return`:
@@ -23,13 +26,13 @@ sudo apt-get install texlive-latex-extra
 
 Check everything went according to plan:
 
-```
+``` bash
 tex --version
 ```
 
 which gives the following output:
 
-```{}
+``` bash
 TeX 3.14159265 (TeX Live 2019/Debian)
 kpathsea version 6.3.1
 Copyright 2019 D.E. Knuth.
@@ -83,5 +86,5 @@ The expected output starts with the following information:
 pandoc 2.2.x.x
 
 ```
-Ensure you have at least version 2.1.1 installed.
 
+Ensure you have at least version 2.1.1 installed.
