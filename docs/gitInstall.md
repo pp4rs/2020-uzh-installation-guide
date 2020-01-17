@@ -132,13 +132,13 @@ Verify this, by following [these instructions](#verifying-your-install).
 To verify your installation, type the following command in a terminal and press the return key:
 
 ```bash
-       git --version
+git --version
 ```
 
 You should get an output that looks like:
 
 ```bash
-        git version 2.18.0
+git version 2.18.0
 ```
 
 Ensure that you have a version greater than `2.15.0` installed.
