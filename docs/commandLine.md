@@ -106,7 +106,7 @@ After the installation succeeded successfully repeat this one-by-one with the fo
 ```bash
 sudo apt-get install libxml2-dev
 sudo apt-get install libssl-dev
-sudo apt-get install gdebi
+sudo apt-get install gdebi-core
 ```
 
 !!! tip "Windows Users: Copy and Paste"
