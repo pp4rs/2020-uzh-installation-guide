@@ -1,11 +1,14 @@
 {
     "cSpell.words": [
+        "Chromedriver",
         "Lachlan",
         "OLAT",
         "Pearce",
         "Whitespacer",
+        "chmod",
         "citool",
         "difftool",
+        "dpkg",
         "fsck",
         "gdebi",
         "gitcompletion",
@@ -13,11 +16,14 @@
         "gnutls",
         "instaweb",
         "johnsmith",
+        "libappindicator",
         "libcurl",
         "libgit",
+        "libindicator",
         "librtmp",
         "libssl",
         "libxml",
+        "libxss",
         "linearmodels",
         "markdownlint",
         "mergetool",
@@ -34,6 +40,7 @@
         "virtualenvwrapper",
         "whatchanged",
         "worktree",
-        "xcode"
+        "xcode",
+        "xvfb"
     ]
 }

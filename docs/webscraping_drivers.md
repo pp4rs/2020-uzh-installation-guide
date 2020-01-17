@@ -1,10 +1,11 @@
+<!-- markdownlint-disable MD024 -->
+<!-- see https://github.com/DavidAnson/markdownlint for code to enable or disable rules -->
 # Web Scraping Using an Automated Browser
 
 Sometimes when we scrape the web, we need to automate our computer to open a web browser to gather information from each page.
 This is especially true when the site we want to scrape has content that is loaded dynamically with javascript.
 
 We will install one package to help us here: Chromedriver
-
 
 Installing this stuff is operating system specific, hence so are the instructions below.
 
@@ -22,7 +23,7 @@ brew cask install google-chrome
 
 Verify the install:
 
-``` 
+``` bash
 google-chrome --version
 ```
 
@@ -34,7 +35,7 @@ Google Chrome 79.0.3945.117
 
 ### Chromedriver
 
-Now we install some software than can control a Google Chrome browser. 
+Now we install some software than can control a Google Chrome browser.
 It is called Chromedriver.
 Again, install via Homebrew:
 
@@ -44,14 +45,13 @@ brew cask install chromedriver
 
 Verify your install.
 
-```
+``` bash
 chromedriver --version
 ```
 
 The expected output is `ChromeDriver 79.0.3945.36 ....`.
 
 It **is important** that the version numbers (i.e the '79' part) match between Google Chrome and Chromedriver.
-
 
 ## Linux & Windows Users
 
@@ -80,7 +80,7 @@ sudo apt-get install -f
 
 Verify the install:
 
-``` 
+``` bash
 google-chrome --version
 ```
 
