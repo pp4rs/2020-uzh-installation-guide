@@ -29,13 +29,13 @@ Proceed as follows:
 1. Open 'Settings' by searching for it in the search bar
 
     <img src="../img/install-wsl/01-settings.jpg" class="center" height = "500">
-    
+
     <br/>
 
 2. In Setting, search for 'Apps & features'
 
     <img src="../img/install-wsl/02-apps-features.jpg" class="center" height = "500">
-    
+
     <br/>
 
 3. Scroll down and click on 'Programs and Features'
@@ -69,12 +69,11 @@ It is one of the more user friendly choices around.
 
 Once your PC has rebooted, proceed as follows:
 
-1. Open the Micrsoft Store by searching for it in the search bar
+1. Open the Microsoft Store by searching for it in the search bar
 
     <img src="../img/install-linux-dist/01-search-store.jpg" class="center" height = "500">
-    
-    <br/><br/>
 
+    <br/><br/>
 
 2. Search for 'Ubuntu' in the Store search bar and press enter
 
@@ -130,7 +129,7 @@ Once your PC has rebooted, proceed as follows:
 
     <br/>
 
-### WSL Not Enabled Errors?
+### WSL Not Enabled Errors
 
 !!! danger "WSL not enabled"
 
@@ -146,7 +145,7 @@ Once your PC has rebooted, proceed as follows:
 
 ## Installing Windows Terminal
 
-The terminal that comes with Ubuntu 18.04 LTS out of the box is not our favourite, so we will install something a little better.
+The terminal that comes with Ubuntu 18.04 LTS out of the box is not our favorite, so we will install something a little better.
 Proceed as follows:
 
 (You should be more comfortable installing stuff from the store now, so we will skip the screenshots)
@@ -164,4 +163,4 @@ Proceed as follows:
 
 As you proceed through the remainder of the Installation Guide, you will generally follow the steps for 'Linux Users' and enter the commands into the Ubuntu Terminal we just installed.
 
-Occasionally there will be differences between Linux and Windows steps - these will be clearly marked by a separate header 'Windows Users.' 
+Occasionally there will be differences between Linux and Windows steps - these will be clearly marked by a separate header 'Windows Users.'
