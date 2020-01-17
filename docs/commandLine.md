@@ -110,11 +110,15 @@ sudo apt-get install libssl-dev
 sudo apt-get install gdebi-core
 ```
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
 !!! tip "Windows Users: Copy and Paste"
     The 'traditional' `Ctrl + C` and `Ctrl + v` doesn't work with your terminal because as `Ctrl + Key` commands have a special meaning.
     To save manually writing stuff in there's two alternatives:
+
     * Use the 'Linux' copy and paste commands: copy is `Ctrl + Shift + C` and paste is `Ctrl + Shift + V`.
     * Highlight the text with you cursor, and then in the terminal use your mouses right-click to paste it in.
+<!-- markdownlint-restore -->
 
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
