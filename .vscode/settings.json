@@ -21,6 +21,7 @@
         "markdownlint",
         "mergetool",
         "openssl",
+        "prepend",
         "reflog",
         "shortlog",
         "shortname",

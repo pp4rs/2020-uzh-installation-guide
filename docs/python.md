@@ -27,7 +27,7 @@ Do you approve the license terms? [yes|no]
 
 Press `Return` until you reach the end, and type 'yes'.
 
-### Making Anaconda Python Accessible from the Terminal.
+### Making Anaconda Python Accessible from the Terminal
 
 By default, Mac uses a default install of Python inside the terminal.
 We want to change that.
@@ -40,7 +40,7 @@ export PATH="/usr/local/anaconda3/bin:$PATH"
 
 Then, reload the terminal environment:
 
-```
+``` bash
 source .bash_profile
 ```
 
@@ -88,25 +88,28 @@ Once the installation is complete, you will get the following output:
 installation finished.
 Do you wish the installer to prepend the Anaconda3 install location
 to PATH in your /home/lachlan/.bashrc ? [yes|no]
->>> 
+>>>
 ```
 
 Type 'yes'.
 
 Now we need to refresh our terminal settings, so type the following and press return:
 
-```
+``` bash
 source ~/.bashrc
 ```
 
 Now proceed to [verify your install](#verify-installation).
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
 !!! tip "Updating the Anaconda Install"
     In the future, if you want to find the most up to date Anaconda installer, go to the following website:
 
     https://repo.anaconda.com/archive/
 
     and find the most recent Anaconda3 installer for Linux-x86_64
+<!-- markdownlint-restore -->
 
 ## Verify Installation
 
@@ -122,8 +125,8 @@ which yields:
 Python 3.7.4
 ```
 
-which tells us that Python is installed. 
-But, because most operating systems thesedays have some version of Python installed, this doesn't guarantee that the Anaconda version is available for us to use from the terminal.
+which tells us that Python is installed.
+But, because most operating systems these days have some version of Python installed, this doesn't guarantee that the Anaconda version is available for us to use from the terminal.
 
 To check, initiate Python by entering the following into a terminal and pressing `Return`:
 
@@ -148,12 +151,15 @@ To quit the Python session we just opened, type the following at the `>>>`:
 >>> quit()
 ```
 
-and you will return to your terminal. 
+and you will return to your terminal.
 This was successful if you now see a `$` rather than the `>>>`.
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
 !!! tip "Python 2 vs Python 3"
     Python 2 and 3 are incompatible in syntax. If you had Python 2 previously installed on your machine, you might have seen `Python 2.x.x` above. In that case try typing
 
     ```python3 --version```
 
     instead. Now you should see a message like the one above and are good to go for the course.
+<!-- markdownlint-restore -->
