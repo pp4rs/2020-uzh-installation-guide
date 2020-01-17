@@ -16,7 +16,7 @@ You will need to setup accounts for each of these: -->
 
 * Please [register](https://github.com/join) for a [GitHub](https://github.com/) account
 * When choosing a username we recommend not using a name that includes an employer or university in case you move later on
-    - i.e. 'johnsmith' or 'johnsmith86' are OK, 'johnsmithUZH' probably not
+  * i.e. 'johnsmith' or 'johnsmith86' are OK, 'johnsmithUZH' probably not
 <!-- *   Sign into the [Economics Department's GitLab server](https://econgit.uzh.ch/). Use your UZH shortname and your web-access password (same as for OLAT). You will need to access "Econ Git" while on-site at UZH or whilst using a UZH VPN if you are off-site. -->
 
 <!-- !!! danger "Non-UZH Economics Students"
@@ -26,7 +26,7 @@ You will need to setup accounts for each of these: -->
 
 ## Mac Users
 
-### Installing Git 
+### Installing Git
 
 We will install Git using Homebrew. Enter the following lines of code into your terminal:
 
@@ -36,7 +36,6 @@ brew link --force git
 ```
 
 Then close and reopen the terminal. Now [Verify your installation](#verifying your install)
-
 
 ### Autocompletion
 
@@ -100,10 +99,9 @@ save this file as `git-completion.bash` to your user folder by pressing `CMD+s`.
 
 If you use Safari, make sure to save the file as `Page Source` and don't append a `.txt` to its filename (Chrome does this automatically). If everything went right, you can now type `ls` in your terminal window and should see `git-completion.bash` there between other files. -->
 
-
 ## Linux Users
 
-Git should be installed already for you. 
+Git should be installed already for you.
 To check if it is, enter the following in a terminal:
 
 ``` bash
