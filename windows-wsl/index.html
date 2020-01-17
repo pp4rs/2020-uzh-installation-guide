@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Windows Subsystem - Programming Practices for Research in Econonomics</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Windows Subsystem";
+    var mkdocs_page_input_path = "windows-wsl.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Programming Practices for Research in Econonomics</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Welcome</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Windows Subsystem</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#windows-subsystem-for-linux">Windows Subsystem For Linux</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#install-the-windows-subsystem-for-linux">Install the Windows Subsystem for Linux</a></li>
+        
+            <li><a class="toctree-l3" href="#installing-a-linux-distribution">Installing a Linux Distribution</a></li>
+        
+            <li><a class="toctree-l3" href="#installing-windows-terminal">Installing Windows Terminal</a></li>
+        
+            <li><a class="toctree-l3" href="#the-way-forward">The Way Forward</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../commandLine/">Command Line Tools</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../textEditor/">Text Editor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../gitInstall/">Git</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python/">Python</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python-more/">Python Extras</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../snakemake/">Build Tools</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../webscraping_drivers/">Webscraping</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../snakemake/">Automation with Snakemake</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../r/">R</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pandoc/">LaTeX & Pandoc</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../finish.md">The Finish Line!</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../contact/">Contact Us</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../citation-license/">Citation & License</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../acknowledgement/">Acknowledgements</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Programming Practices for Research in Econonomics</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Windows Subsystem</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="windows-subsystem-for-linux">Windows Subsystem For Linux</h1>
+<div class="admonition tip">
+<p class="admonition-title">Windows Users Only!</p>
+<p>This page is only for those who are using Windows. Those with Mac or Linux operating systems can proceed to 'Command Line Tools.'</p>
+</div>
+<p>Windows Subsystem for Linux (WSL) is a feature in Windows 10 that enables you to use Linux command-line tools on your Windows system.
+By installing this feature, everyone in the course will be able to run the same commands, and get the same output - an essential aspect of reproducibility.
+We hope that you will continue to use the WSL features after the course for your research related computing.</p>
+<p>The process for installing everything we need here is quite order dependent - follow the steps in the order they appear below.</p>
+<div class="admonition tip">
+<p class="admonition-title">Want More Information?</p>
+<p>For more information about the Windows Subsystem for Linux, look <a href="https://docs.microsoft.com/en-us/windows/wsl/faq">here</a>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Up to Date Windows 10 Required!</p>
+<p>To go further with this Installation Guide you need to have an up to date installation of Windows 10. 
+IT Services in the Econ Department have assured us, if you update Windows to the latest version in your UZH laptop everything that follows will work. </p>
+<p>If you do not have a Windows 10 machine. <a href="../contact/#questions-or-comments">Contact us!</a></p>
+</div>
+<h2 id="install-the-windows-subsystem-for-linux">Install the Windows Subsystem for Linux</h2>
+<p>As a first step we need to install the Windows Linux Subsystem.
+Proceed as follows:</p>
+<ol>
+<li>
+<p>Open 'Settings' by searching for it in the search bar</p>
+<p><img src="../assets/install-wsl/01-settings.jpg" class="center" height = "500"></p>
+</li>
+<li>
+<p>In Setting, search for 'Apps &amp; features'</p>
+<p><img src="../assets/install-wsl/02-apps-features.jpg" class="center" height = "500"></p>
+</li>
+<li>
+<p>Scroll down and click on 'Programs and Features'</p>
+<p><img src="../assets/install-wsl/03-programs-features.jpg" class="center" height = "500"></p>
+</li>
+<li>
+<p>On the left, click on 'Turn Windows features on or off'</p>
+<p><img src="../assets/install-wsl/04-features-on-off.jpg" class="center" height = "500"></p>
+</li>
+<li>
+<p>Scroll down until you see 'Windows Subsystem for Linux' and click the box, and then click 'OK'</p>
+<p><img src="../assets/install-wsl/05-wsl-ok.jpg" class="center" height = "500"></p>
+</li>
+<li>
+<p>A prompt to restart your PC will appear, click 'Restart now' to restart your PC.</p>
+<p><img src="../assets/install-wsl/06-complete-and-restart.jpg" class="center" height = "500"></p>
+</li>
+</ol>
+<h2 id="installing-a-linux-distribution">Installing a Linux Distribution</h2>
+<p>We are going to install 'Ubuntu' as our Linux distribution of choice. 
+It is one of the more user friendly choices around. </p>
+<p>Once your PC has rebooted, proceed as follows:</p>
+<ol>
+<li>
+<p>Open the Micrsoft Store by searching for it in the search bar</p>
+<p><img src="../assets/install-linux-dist/01-search-store.jpg" class="center" height = "500"></p>
+</li>
+<li>
+<p>Search for 'Ubuntu' in the Store search bar and press enter</p>
+<p><img src="../assets/install-linux-dist/02-search-ubuntu.jpg" class="center" height = "500"></p>
+</li>
+<li>
+<p>Select 'Ubuntu 18.04 LTS' from the choices returned by clicking on it</p>
+<p><img src="../assets/install-linux-dist/03-select-ubuntu-lts.jpg" class="center" height = "500"></p>
+</li>
+<li>
+<p>Click 'Get' to install</p>
+<p><img src="../assets/install-linux-dist/04-ubuntu-18.jpg" class="center" height = "500"></p>
+</li>
+<li>
+<p>Once installed, if you open the Windows Menu, you will See 'Ubuntu 18.04 LTS' under 'Recently Added'</p>
+<p><img src="../assets/install-linux-dist/05-ubuntu-installed.jpg" class="center" height = "500"></p>
+</li>
+<li>
+<p>Click on 'Ubuntu 18.04 LTS.' A black terminal will open, and inform you it is installing</p>
+<p><img src="../assets/install-linux-dist/07-installing.jpg" class="center" height = "500"></p>
+</li>
+<li>
+<p>Once installed, it will prompt you to create an account. Enter a username</p>
+<p><img src="../assets/install-linux-dist/08-unix-username.jpg" class="center" height = "500"></p>
+</li>
+<li>
+<p>And a password (Note: as you enter a password nothing will appear)</p>
+<p><img src="../assets/install-linux-dist/09-unix-password.jpg" class="center" height = "500"></p>
+</li>
+<li>
+<p>Re-enter the password as instructed</p>
+<p><img src="../assets/install-linux-dist/10-unix-password-reenter.jpg" class="center" height = "500"></p>
+</li>
+<li>
+<p>The installation will now have completed</p>
+<p><img src="../assets/install-linux-dist/11-ubuntu-success.jpg" class="center" height = "500"></p>
+</li>
+</ol>
+<div class="admonition danger">
+<p class="admonition-title">WSL not enabled</p>
+<p>If at Step 6, you see the following:</p>
+<p><img src="../assets/install-linux-dist/06-wsl-not-enabled.jpg" class="center" height = "500"></p>
+<p>This means you have not successfully installed the Windows Subsystem for Linux, or you did not restart your machine as instructed.
+Try to either:</p>
+<ol>
+<li>Restart your PC</li>
+<li>Return <a href="#install-the-windows-subsystem-for-linux">here</a> and redo the process.</li>
+</ol>
+</div>
+<h2 id="installing-windows-terminal">Installing Windows Terminal</h2>
+<p>The terminal that comes with Ubuntu 18.04 LTS out of the box is not our favourite, so we will install something a little better.
+Proceed as follows:</p>
+<p>(You should be more comfortable installing stuff from the store now, so we will skip the screenshots)</p>
+<ol>
+<li>Open the Microsoft Store</li>
+<li>Search for Windows Terminal</li>
+<li>Choose the first option - Windows Terminal (Preview)</li>
+<li>Install it by clicking 'Get'</li>
+<li>Once installed, you will see it under 'Recently Added' in the Windows menu</li>
+<li>Open Windows Terminal</li>
+<li>To get access to your Ubuntu system, click the down arrow in the menu bar</li>
+<li>Select Ubuntu-18.04, and your Ubuntu terminal will open</li>
+</ol>
+<h2 id="the-way-forward">The Way Forward</h2>
+<p>As you proceed through the remainder of the Installation Guide, you will generally follow the steps for 'Linux Users' and enter the commands into the Ubuntu Terminal we just installed.
+Occasionally there will be differences between Linux and Windows steps - and these will be clearly marked by a separate header 'Windows Users.' </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../commandLine/" class="btn btn-neutral float-right" title="Command Line Tools">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Welcome"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../commandLine/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

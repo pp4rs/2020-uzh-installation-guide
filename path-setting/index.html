@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Webscraping - Programming Practices for Research in Econonomics</title>
+  <title>Making Path Settings Permanent - Programming Practices for Research in Econonomics</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Webscraping";
-    var mkdocs_page_input_path = "webscraping_drivers.md";
+    var mkdocs_page_name = "Making Path Settings Permanent";
+    var mkdocs_page_input_path = "path-setting.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -88,25 +88,9 @@
     <a class="" href="../snakemake/">Build Tools</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">Webscraping</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#web-scraping-using-an-automated-browser">Web Scraping Using an Automated Browser</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#mac-users">Mac Users</a></li>
-        
-            <li><a class="toctree-l3" href="#windows-users">Windows Users</a></li>
-        
-            <li><a class="toctree-l3" href="#linux-users">Linux Users</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../webscraping_drivers/">Webscraping</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -166,7 +150,7 @@
     
       
     
-    <li>Webscraping</li>
+    <li>Making Path Settings Permanent</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -176,100 +160,60 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="web-scraping-using-an-automated-browser">Web Scraping Using an Automated Browser</h1>
-<p>Sometimes when we scrape the web, we need to automate our computer to open a web browser to gather information from each page.
-This is especially true when the site we want to scrape has content that is loaded dynamically with javascript.</p>
-<p>We will install one package to help us here: Chromedriver</p>
-<p>Installing this stuff is operating system specific, hence so are the instructions below.</p>
-<h2 id="mac-users">Mac Users</h2>
-<p>Make sure your <code>homebrew</code> package is up-to-date. To do so, open a terminal and enter</p>
-<pre><code>brew update
+                <h1 id="making-path-settings-permanent">Making Path Settings Permanent</h1>
+<p>For our workflow be be command line driven, we need to be able to call software from the command line.
+Whilst much of the software we have installed as automatically made this possible, it is not universally the case.
+Here we will make the extra few changes we need to complete the installation guide.</p>
+<h2 id="windows-users-for-windows-8-and-10">Windows Users (for Windows 8 and 10)</h2>
+<p>You will need local administration rights for your computer, but you should have these on your personal computers or ones owned by the Department.</p>
+<p>Right-click on Computer. Then go to "Properties" and select the tab "Advanced System settings". Choose "Environment Variables" and select "Path" from the list of system variables.</p>
+<p>Choose “Edit” and append (i.e., do not overwrite the previous value):</p>
+<pre><code>    ;C:\Path\to\program.exe
 </code></pre>
-
-<h3 id="chromedriver">Chromedriver</h3>
-<ul>
-<li>
-<p>We assume you have Google Chrome installed. If not, do this first.</p>
-</li>
-<li>
-<p>Install <code>chromedriver</code> via homebrew:</p>
-</li>
-</ul>
-<pre><code>brew cask install chromedriver
+<p>to the variable value – make sure the rest remains as it is and do not include spaces between the ";" and the text.</p>
+<p>Click on OK as often as needed.</p>
+<p>If you accepted all defaults during your installation, and didn't have any other non-default setting prior to starting this guide, modifying the following string, with your relevant username <em>should</em> work:</p>
+<pre><code>    ;C:\Users\ldeer\AppData\Local\atom\bin
+    ;C:\Program Files\Git\bin
+    ;C:\Program Files\R\R-3.X.X\bin
+    ;
 </code></pre>
-
-<ul>
-<li>Verify your install, by entering the following in your terminal. The expected output is <code>ChromeDriver 2.4X.X</code></li>
-</ul>
-<pre><code>chromedriver --version
+<h2 id="mac-users-slight-modifications-for-linux-users">Mac Users (Slight Modifications for Linux Users)</h2>
+<p>You will need to add a line to the file ".bash_profile" or potentially create the file if it didn't already exist.
+This file lives in your home directory and it is hidden from your view by default.</p>
+<p>We now provide a guide of how to create / adjust this file using a tiny editor called nano, if you are familiar with editing text files, just use your editor of choice.</p>
+<p>Open a Terminal and type:</p>
+<pre><code>    nano ~/.bash_profile
 </code></pre>
-
-<h2 id="windows-users">Windows Users</h2>
-<h3 id="chromedriver_1">Chromedriver</h3>
-<ul>
-<li>Install Google Chrome from <a href="https://www.google.com/chrome/browser/desktop/index.html">here</a></li>
-<li>Download the windows version of Chromedriver from <a href="https://chromedriver.storage.googleapis.com/index.html?path=2.41/">here</a>.</li>
-<li>Extract the contents from the zip file, and extract them into a new directory under <code>C:\chromedriver</code></li>
-<li>Make sure that the chromedriver.exe file is directly under the PATH you specified, i.e. under C:\chromedriver. If your zip unpacker created a new folder with a different name inside your specified folder, move the .exe file to <code>C:\chromedriver</code>.</li>
-<li>Add the directory <code>C:\chromedriver</code> to your PATH as described before.</li>
-<li>If this went successfully, open a new Cygwin session, and enter <code>chromedriver --version</code>, you should get output that looks like <code>ChromeDriver 2.4X.XX</code></li>
-</ul>
-<h2 id="linux-users">Linux Users</h2>
-<h3 id="chromedriver_2">Chromedriver</h3>
-<ul>
-<li>Open a terminal session</li>
-<li>Install Google Chrome for Debian/Ubuntu by pasting the following and then pressing <code>Return</code></li>
-</ul>
-<pre><code>sudo apt-get install libxss1 libappindicator1 libindicator7
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-
-sudo dpkg -i google-chrome*.deb
-sudo apt-get install -f
+<p>If .bash_profile already existed, you will see some text at this point. If so, use the arrow keys to scroll all the way to the bottom of the file.</p>
+<p>Add the following line at the end of the file:</p>
+<pre><code>    export PATH="${PATH}:/path/to/program/inside/package"
 </code></pre>
-
-<ul>
-<li>Install <code>xvfb</code> so chrome can run 'headless' by pasting the following and then pressing <code>Return</code></li>
-</ul>
-<pre><code>sudo apt-get install xvfb
+<p>for each program we need to make accessible.</p>
+<p>For example to make matlab accessible from the command line:</p>
+<pre><code>    export PATH="${PATH}:/Applications/MATLAB_R2016a.app/bin/matlab
 </code></pre>
-
+<p>Please do this for the following software:</p>
 <ul>
-<li>Install Chromedriver by pasting the following and then pressing <code>Return</code>:</li>
+<li>Sublime Text</li>
+<li>Git</li>
+<li>Matlab</li>
+<li>R</li>
 </ul>
-<pre><code>sudo apt-get install unzip
-
-wget -N https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
-unzip chromedriver_linux64.zip
-chmod +x chromedriver
-
-sudo mv -f chromedriver /usr/local/share/chromedriver
-sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
-sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
+<p>Once you have finished,  press Return and then ctrl+o (= WriteOut = save) and Return once more.</p>
+<p>Your default locale settings may conflict with some of the programs we'll need.
+If you want to be on the safe side, add these lines to your .bash_profile file:</p>
+<pre><code>    export LC_ALL=en_US.UTF-8
+    export LANG=en_US.UTF-8
 </code></pre>
-
-<ul>
-<li>Your install worked, you should get <code>ChromeDriver 2.4X.XX</code> returned if the installation was successful</li>
-</ul>
-<pre><code>chromedriver --version
-</code></pre>
-
-<div class="admonition tip">
-<p class="admonition-title">Hat-tip</p>
-<p>We borrowed quite liberally from Christopher Su to for instructions on <a href="https://christopher.su/2015/selenium-chromedriver-ubuntu/">installing Chrome and Chromedriver</a>.</p>
-</div>
+<p>Thanks for Hans-Martin von Gaudecker, and in turn Matthias Bannert for the tip on locale settings.</p>
+<p><strong>Linux users</strong>: For most distributions, everything here applies to the file .bashrc instead of .bash_profile.</p>
+<h2 id="the-end">The End</h2>
+<p>Well done - it's time for a beer, or some other cold beverage to celebrate completing this guide.</p>
               
             </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../snakemake/" class="btn btn-neutral float-right" title="Automation with Snakemake">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../snakemake/" class="btn btn-neutral" title="Build Tools"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
@@ -293,10 +237,6 @@ sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../snakemake/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../snakemake/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

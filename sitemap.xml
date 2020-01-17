@@ -1,68 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-     <loc>/</loc>
-     <lastmod>2018-08-23</lastmod>
+     <loc>None</loc>
+     <lastmod>2020-01-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/commandLine/</loc>
-     <lastmod>2018-08-23</lastmod>
+     <loc>None</loc>
+     <lastmod>2020-01-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/textEditor/</loc>
-     <lastmod>2018-08-23</lastmod>
+     <loc>None</loc>
+     <lastmod>2020-01-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/gitInstall/</loc>
-     <lastmod>2018-08-23</lastmod>
+     <loc>None</loc>
+     <lastmod>2020-01-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/python/</loc>
-     <lastmod>2018-08-23</lastmod>
+     <loc>None</loc>
+     <lastmod>2020-01-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/python-more/</loc>
-     <lastmod>2018-08-23</lastmod>
+     <loc>None</loc>
+     <lastmod>2020-01-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/snakemake/</loc>
-     <lastmod>2018-08-23</lastmod>
+     <loc>None</loc>
+     <lastmod>2020-01-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/webscraping_drivers/</loc>
-     <lastmod>2018-08-23</lastmod>
+     <loc>None</loc>
+     <lastmod>2020-01-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/r/</loc>
-     <lastmod>2018-08-23</lastmod>
+     <loc>None</loc>
+     <lastmod>2020-01-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/gis/</loc>
-     <lastmod>2018-08-23</lastmod>
+     <loc>None</loc>
+     <lastmod>2020-01-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/pandoc/</loc>
-     <lastmod>2018-08-23</lastmod>
+     <loc>None</loc>
+     <lastmod>2020-01-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/contact/</loc>
-     <lastmod>2018-08-23</lastmod>
+     <loc>None</loc>
+     <lastmod>2020-01-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/acknowledgement/</loc>
-     <lastmod>2018-08-23</lastmod>
+     <loc></loc>
+     
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>None</loc>
+     <lastmod>2020-01-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>None</loc>
+     <lastmod>2020-01-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>None</loc>
+     <lastmod>2020-01-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
