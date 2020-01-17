@@ -28,7 +28,7 @@ Proceed as follows:
 
 1. Open 'Settings' by searching for it in the search bar
 
-    <img src="../assets/install-wsl/01-settings.jpg" class="center" height = "500">
+    <img src="img/install-wsl/01-settings.jpg" class="center" height = "500">
 
 2. In Setting, search for 'Apps & features'
 
