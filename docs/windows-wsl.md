@@ -6,7 +6,7 @@
 
 Windows Subsystem for Linux (WSL) is a feature in Windows 10 that enables you to use Linux command-line tools on your Windows system.
 By installing this feature, everyone in the course will be able to run the same commands, and get the same output - an essential aspect of reproducibility.
-We hope that you will continue to use the WSL features after the course for your research related computing.
+We hope that you will continue to use the WSL features we introduce to you over the next three weeks after the course is over for your own research related computing.
 
 The process for installing everything we need here is quite order dependent - follow the steps in the order they appear below.
 
