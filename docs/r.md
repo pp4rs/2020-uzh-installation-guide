@@ -3,19 +3,59 @@
 R is a language for statistical computing and graphics.
 R's use in the data science and econometrics community has taken off over recent years and (at a bare minimum) should be considered as an open source replacement to Stata.
 
-## Installing R
+RStudio provides an easy to work with graphical interface to R, and its format should feel familiar to Stata and Matlab users.
+
+## Installing R for Mac Users
 
 Go to the [R homepage](https://cran.r-project.org/) and download the installer for your operating system.
 
-The current version for Mac and Windows is `R version 3.5.1` and for Linux it is `R version 3.4.1`
+The current version for Mac and Windows is `R version 3.6.2`.
 
-## Installing RStudio
+Once you have installed R, [verify your install](#verifying-your-install-of-r-all-users).
 
-RStudio provides an easy to work with interface to R, and its format should feel familiar to Stata and Matlab users.
+!!! tip "Why Not Install via Homebrew?"
+        There is conflicting views on Homebrews installation of `R`.
+        Because we haven't tried it to ensure no problems will emerge, we recommend going with the installation based on the CRAN distributed package.
 
-Download and install the free version of RStudio for your operating system from [here](https://www.rstudio.com/products/rstudio/download3/).
+## Installing R for Linux & Windows Users
 
-## Verifying your Install of R
+First, we need to add a repository so that our operating system knows where to install the most recent version of `R` from.
+
+Enter the following into the terminal and press `Return`:
+
+```bash
+sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'
+```
+
+Now, update to get the package manifests from the new repository:
+
+```bash
+sudo apt-get update
+```
+
+**Note:** if you are using a different version of Linux or Ubuntu - i.e. not Ubuntu 18.04 LTS, check out [this site](https://cran.r-project.org/bin/linux/) to correctly modify the entry above. 
+
+We can now install `R` as from the terminal by entering the following:
+
+```{bash}
+sudo apt-get install r-base r-base-dev
+```
+
+Install the multi-threaded OpenBlas library to get higher performance for linear algebra operations:
+
+```{bash}
+sudo apt-get install libopenblas-base
+```
+
+Now, [verify your install](#verifying-your-install-of-r-all-users).
+
+
+!!! warning "R on WSL Ubuntu vs. R on native Windows"
+        Even if you already have a version of `R` installed on your Windows machine, you need to install `R` inside the WSL Ubuntu 18.04 environment we have set up. 
+        Your Ubuntu terminal cannot see everything you have on your native Windows installation.
+
+
+## Verifying your Install of R - All Users
 
 Open a terminal and enter:
 
@@ -26,52 +66,122 @@ R --version
 followed by pressing `Return`. The expected return begins with:
 
 ```bash
-R version 3.x.1 (201x-xx-xx) -- "Some Funky Name"
+R version 3.6.x (2019-xx-xx) -- "Some Funky Name"
 ```
 
-You should see the version corresponding to the one chosen on the website.
+Now proceed to install RStudio.
 
-!!! danger " Windows PATH Setting redux"
-    If you want R available from the command line (it is by default for Mac and Linux), we again need to update our PATH settings.
+## Installing RStudio for Mac Users
 
-    Right-click on Computer. Then go to "Properties" and select the tab "Advanced System settings". Choose "Environment Variables" and select `Path` from the list of system variables.
+We can install RStudio with Homebrew:
 
-    Choose `Edit`.
+``` bash
+brew cask install rstudio
+```
 
-    **Windows 7 and 8 machines:**
-    If you accepted all defaults during your installation, and didn't have any other non-default setting prior to starting this guide, copy and paste the following string without spaces at the start or end:
+To see if it installed correctly, try and open RStudio from spotlight - there's not simple verification from the terminal.
 
-            ;C:\Program Files\R\R-3.5.1\bin
+## Installing RStudio for Linux Users
 
-    **Windows 10 machines:**
-    Click `New` and paste the following string:
+Download the Latest Version of RStudio:
 
-            C:\Program Files\R\R-3.5.1\bin
+``` bash
+wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5033-amd64.deb
+```
 
-    Click on `OK` as often as needed.
+Install it:
 
-    After you have done this, open a **new** terminal and try and verify your install.
+```bash
+sudo gdebi rstudio-1.2.5033-amd64.deb
+```
+To see if it installed correctly, try and open RStudio from the GNOME menu - there's not simple verification from the terminal.
 
-## Installing Additional R Packages
+## Installing RStudio for Windows Users
+
+Using RStudio together with the R that we installed into our WSL Ubuntu setup is a little trickier - because we don't have access to a graphical interface.
+
+The trick will be to install the server version of RStudio. 
+It may sound slightly daunting - but it is actually quite easy!
+
+First, we download the most recent version of RStudio Server for Ubuntu 18 (see [here](https://rstudio.com/products/rstudio/download-server/debian-ubuntu/)).
+Enter the following into your terminal and press `Return`:
+
+```bash
+wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.2.5033-amd64.deb
+```
+
+Now install it by entering this command and hitting `Return`:
+
+``` bash
+sudo gdebi rstudio-server-1.2.5033-amd64.deb
+```
+
+Now that we have RStudio installed on our subsystem, how can we use it?
+
+In the Ubuntu terminal enter the following text and press `Return`:
+
+```bash
+sudo rstudio-server start
+```
+
+Now open a web browser, and go to the following address:
+
+```bash
+http://localhost:8787/
+```
+
+which will take you to a log in page. 
+
+Log in using the username and password for your Ubuntu terminal that we set up at the beginning.
+
+After logging in successfully you have access to the RStudio that you installed in your Ubuntu subsystem.
+
+To log out, click on the log out button in the top right corner.
+
+To stop the RStudio server from running (logging out doesn't stop it), enter `rstudio stop` into your terminal.
+
+## Additional R Packages - All Users
 
 We will need some additional libraries to conduct our statistical analysis. Proceed as follows:
 
 *   Open RStudio
 *   In the **console**, copy and paste the following:
-```r
-uzh_progecon <- c(  "reshape", "rmarkdown",
-                    "plm", "Hmisc", "sandwich",
-                    "Ecdat", "stargazer", "knitr",
-                    "httr", "rvest", "xml2",
-                    "xtable","tidyverse", "AER",
-                    "rdd", "car", "aod", "lmtest",
-                    "lfe", "nlme", "lme4",
-                    "erer", "margins",
-                    "multiwayvcov", "RSQLite", "dbplyr")
 
-install.packages(uzh_progecon)
+```r
+to_install <-c( "reshape", "rmarkdown",
+                "plm", "Hmisc", "sandwich",
+                "Ecdat", "stargazer", "knitr",
+                "httr", "rvest", "xml2",
+                "xtable","tidyverse", "AER",
+                "rdd", "car", "aod", "lmtest",
+                "lfe", "nlme", "lme4",
+                "erer", "margins", "multiwayvcov"
+                "lubridate", "haven", "rddensity",
+                "rdrobust", "ivpack", "readxl",
+                "ggrepel", "multiwayvcov", "RSQLite", 
+                "dbplyr", "devtools", "blogdown", 
+                "rticles", "packrat", "here",
+                "optparse", "rlist"
+                )
+
+install.packages(to_install)
 ```
 
 * If you are asked if you want to install packages that need compilation, type `y` followed by `Return` to confirm this.
 *   Wait until all the packages have been installed and the you are done.
     *   It *may* take a while, so be patient
+
+Note that many dependencies get installed along the way.
+
+We also want some packages to be installed from Github - these typically still under development:
+
+```{r}
+from_gh <- c("ddsjoberg/gtsummary", 
+             "vincentarelbundock/modelsummary", 
+             "rstudio/fontawesome", 
+             "rstudio/gt",
+             "rstudio/renv"
+             )
+
+devtools::install_github(from_gh)
+```
