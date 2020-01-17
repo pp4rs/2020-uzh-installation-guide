@@ -18,8 +18,10 @@
         "librtmp",
         "libssl",
         "libxml",
+        "linearmodels",
         "markdownlint",
         "mergetool",
+        "msgpack",
         "openssl",
         "prepend",
         "reflog",
@@ -29,6 +31,7 @@
         "spearce",
         "submodule",
         "ubergmann",
+        "virtualenvwrapper",
         "whatchanged",
         "worktree",
         "xcode"
