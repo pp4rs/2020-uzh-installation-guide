@@ -20,7 +20,7 @@ Go to the [downloads page](https://www.sublimetext.com/3) and download the live 
 ## VS Code
 
 VS Code is a relatively new text editor that works across all three platforms: Linux, Windows and Mac.
-In a short time it has already become the most used graphical text editor and we hope you will soon see why.
+In a short time it has already become one of most used text editors and we hope you will soon see why.
 It is built by Microsoft, but is open source, i.e. everyone can see and modify the program's internal code - so it is less nasty on the conscious than some of Microsoft's traditional products.
 The main advantages for us are that it includes support for debugging, embedded Git control and GitHub, syntax highlighting, intelligent code completion, and many useful plugins - all of which make our lives much easier.
 
