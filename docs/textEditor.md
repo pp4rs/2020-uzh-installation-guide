@@ -106,4 +106,15 @@ To add extensions:
 
 We recommend the following extensions to be added for this course:
 
-(Lachlan to check his Ubuntu install to add)
+* Bracket Pair Colorizer 2
+* Code Spell Checker
+* Git History
+* LaTeX Workshop
+* Markdown All in One
+* Markdown Preview Enhanced
+* Project Manager
+* Python
+* R
+* vscode-icons
+* vscode-pdf
+* Whitespacer
