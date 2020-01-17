@@ -25,13 +25,14 @@ Install it:
 ```bash
 sudo gdebi rstudio-1.2.5033-amd64.deb
 ```
+
 To see if it installed correctly, try and open RStudio from the GNOME menu - there's not simple verification from the terminal.
 
 ## Installing RStudio for Windows Users
 
 Using RStudio together with the R that we installed into our WSL Ubuntu setup is a little trickier - because we don't have access to a graphical interface.
 
-The trick will be to install the server version of RStudio. 
+The trick will be to install the server version of RStudio.
 It may sound slightly daunting - but it is actually quite easy!
 
 First, we download the most recent version of RStudio Server for Ubuntu 18 (see [here](https://rstudio.com/products/rstudio/download-server/debian-ubuntu/)).
@@ -61,7 +62,7 @@ Now open a web browser, and go to the following address:
 http://localhost:8787/
 ```
 
-which will take you to a log in page. 
+which will take you to a log in page.
 
 Log in using the username and password for your Ubuntu terminal that we set up at the beginning.
 
