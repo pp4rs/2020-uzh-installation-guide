@@ -4,35 +4,6 @@ A command-line interface or command language interpreter (CLI), also known as a 
 
 Throughout the course we will emphasize use of the terminal and executing commands within it as our modus operandi.
 
-## Windows Users
-
-So that we can work as closely as possible to the Mac and Linux users we will install [Cygwin](https://www.cygwin.com/).
-
-*   Download Cygwin [here](https://cygwin.com/install.html) and use the graphical installer. Accept all the default options.
-*   Choose any server from which to download cygwin and packages when prompted. 
-*   Verify your installation by opening Cygwin. When it opens you should see a black box with some text that looks like:
-```bash
-userName@computerName: ~$
-```
-i.e. for Uli he sees:
-```bash
-ubergmann@dhcp-wlan-uzh-10-12-130-xxx: ~$
-```
-We will explain what all this means in the first day or so of the course.
-
-!!! tip "Why Cygwin"
-    *   We will uses Cygwin as our command line tool, and unlike other Windows shells such as PowerShell it uses Unix syntax.
-
-    *   Anywhere throughout the remainder of the installation guide where we suggest you to enter a command into a terminal, enter the text-based command into your Cygwin terminal followed by pressing `Return`, for example:
-
-            userName@computerName: ~$ whoami
-
-
-    Should return your username.
-
-!!! danger "Do Not Delete the Install File"
-    *   **Do not delete the setup-x86_64.exe file.** It needs to be kept so that we can add on some additional packages to use in the course.
-
 ## Mac Users
 
 A command line interface comes already installed with OSX.
