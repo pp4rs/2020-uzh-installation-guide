@@ -163,4 +163,5 @@ Proceed as follows:
 ## The Way Forward
 
 As you proceed through the remainder of the Installation Guide, you will generally follow the steps for 'Linux Users' and enter the commands into the Ubuntu Terminal we just installed.
-Occasionally there will be differences between Linux and Windows steps - and these will be clearly marked by a separate header 'Windows Users.' 
+
+Occasionally there will be differences between Linux and Windows steps - these will be clearly marked by a separate header 'Windows Users.' 
