@@ -1,4 +1,4 @@
-# Installing Anaconda Python
+# Anaconda Python
 
 Anaconda is a pre-packaged Python distribution for scientific users.
 Unlike other Python distributions, this means that most additional functionality that we need to do numerical computing, statistics, plotting and the like come already installed - which saves us a lot of time.
@@ -99,7 +99,7 @@ Now we need to refresh our terminal settings, so type the following and press re
 source ~/.bashrc
 ```
 
-Now proceed to [verify your install](#verify-installation)
+Now proceed to [verify your install](#verify-installation).
 
 !!! tip "Updating the Anaconda Install"
     In the future, if you want to find the most up to date Anaconda installer, go to the following website:
