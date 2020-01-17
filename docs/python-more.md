@@ -5,9 +5,10 @@ If you're interested in all the packages included, click [here](https://docs.con
 
 Howevever, you may come across packages that are not installed by default.
 In this case we recommend you use the `pip` package management tool to install them.
+The following recipe works for *all* operating systems.
 
-!!! note
-    If your python 3 was found via `python3 --version` on the previous page, then type `pip3` instead of `pip` for all of the following python plugins.
+<!-- !!! note
+    If your python 3 was found via `python3 --version` on the previous page, then type `pip3` instead of `pip` for all of the following python plugins. -->
 
 First let us update pip by typing the following into the terminal
 
