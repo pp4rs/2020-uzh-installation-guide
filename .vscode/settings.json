@@ -1,11 +1,15 @@
 {
     "cSpell.words": [
         "Bioinformatics",
+        "Blas",
+        "CRAN",
         "Chromedriver",
+        "Homebrew's",
         "Lachlan",
         "OLAT",
         "Pearce",
         "Snakemake",
+        "Stata",
         "Whitespacer",
         "chmod",
         "citool",
@@ -22,6 +26,7 @@
         "libcurl",
         "libgit",
         "libindicator",
+        "libopenblas",
         "librtmp",
         "libssl",
         "libxml",
