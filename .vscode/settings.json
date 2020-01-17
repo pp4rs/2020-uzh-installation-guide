@@ -38,6 +38,7 @@
         "openssl",
         "prepend",
         "reflog",
+        "rmarkdown",
         "rstudio",
         "shortlog",
         "shortname",

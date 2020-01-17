@@ -1,12 +1,13 @@
-# Additional R Packages 
+# Additional R Packages
 
-We will need some additional libraries to conduct our statistical analysis. 
+We will need some additional libraries to conduct our statistical analysis.
 
 ## All Users
+
 Proceed as follows:
 
-*   Open RStudio
-*   In the **console**, copy and paste the following:
+* Open RStudio
+* In the **console**, copy and paste the following:
 
 ```r
 to_install <-c( "reshape", "rmarkdown",
@@ -19,7 +20,7 @@ to_install <-c( "reshape", "rmarkdown",
                 "erer", "margins", "multiwayvcov"
                 "lubridate", "haven", "rddensity",
                 "rdrobust", "ivpack", "readxl",
-                "ggrepel", "multiwayvcov", "RSQLite", 
+                "ggrepel", "multiwayvcov", "RSQLite",
                 "dbplyr", "devtools",
                 "rticles", "here",
                 "optparse", "rlist"
@@ -29,17 +30,17 @@ install.packages(to_install)
 ```
 
 * If you are asked if you want to install packages that need compilation, type `y` followed by `Return` to confirm this.
-*   Wait until all the packages have been installed and the you are done.
-    *   It *may* take a while, so be patient
+* Wait until all the packages have been installed and the you are done.
+  * It *may* take a while, so be patient
 
 Note that many dependencies get installed along the way.
 
 We also want some packages to be installed from Github - these typically still under development:
 
 ```{r}
-from_gh <- c("ddsjoberg/gtsummary", 
-             "vincentarelbundock/modelsummary", 
-             "rstudio/fontawesome", 
+from_gh <- c("ddsjoberg/gtsummary",
+             "vincentarelbundock/modelsummary",
+             "rstudio/fontawesome",
              "rstudio/gt",
              "rstudio/renv"
              )
