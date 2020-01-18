@@ -105,7 +105,7 @@ Install Chromedriver by pasting the following and then pressing `Return`:
 ``` bash
 sudo apt-get install unzip
 
-wget -N https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
+wget -N https://chromedriver.storage.googleapis.com/79.0.3945.36/chromedriver_linux64.zip
 unzip chromedriver_linux64.zip
 chmod +x chromedriver
 
