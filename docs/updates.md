@@ -12,7 +12,9 @@ Here are the links to previous versions of the Installation Guide:
 
 ### v2020.x
 
-* Migrate from Cygwin to Windows to Linux Subsystem
+* Migrate from Cygwin to Windows Subsystem for Linux
+* Higher dependency on `Homebrew` to install packages for Mac
+* Emphasis on installation using terminal commands rather than graphical installers to enhance reproducibility
 * Remove GIS guide
 * Split's installation instructions of R, RStudio and additional R packaged into separate versions
 
