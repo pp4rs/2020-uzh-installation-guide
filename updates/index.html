@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>RStudio - Programming Practices for Research in Econonomics</title>
+  <title>News & Updates - Programming Practices for Research in Econonomics</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "RStudio";
-    var mkdocs_page_input_path = "rstudio.md";
+    var mkdocs_page_name = "News & Updates";
+    var mkdocs_page_input_path = "updates.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -98,25 +98,9 @@
     <a class="" href="../r/">R</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">RStudio</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#rstudio">RStudio</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#installing-rstudio-for-mac-users">Installing RStudio for Mac Users</a></li>
-        
-            <li><a class="toctree-l3" href="#installing-rstudio-for-linux-users">Installing RStudio for Linux Users</a></li>
-        
-            <li><a class="toctree-l3" href="#installing-rstudio-for-windows-users">Installing RStudio for Windows Users</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../rstudio/">RStudio</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -144,9 +128,23 @@
     <a class="" href="../citation-license/">Citation & License</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../updates/">News & Updates</a>
+    <a class="current" href="./">News & Updates</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#previous-versions-of-the-installation-guide">Previous Versions of the Installation Guide</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#major-changes">Major Changes</a></li>
+        
+            <li><a class="toctree-l3" href="#2019-foundations-edition">2019 Foundations edition</a></li>
+        
+        </ul>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -176,7 +174,7 @@
     
       
     
-    <li>RStudio</li>
+    <li>News & Updates</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -186,58 +184,25 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="rstudio">RStudio</h1>
-<p>RStudio provides an easy to work with graphical interface to R, and its format should feel familiar to Stata and Matlab users.</p>
-<h2 id="installing-rstudio-for-mac-users">Installing RStudio for Mac Users</h2>
-<p>We can install RStudio with Homebrew:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>brew cask install rstudio
-</pre></div>
-</td></tr></table>
-
-<p>To see if it installed correctly, try and open RStudio from spotlight - there's not simple verification from the terminal.</p>
-<h2 id="installing-rstudio-for-linux-users">Installing RStudio for Linux Users</h2>
-<p>Download the Latest Version of RStudio:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5033-amd64.deb
-</pre></div>
-</td></tr></table>
-
-<p>Install it:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo gdebi rstudio-1.2.5033-amd64.deb
-</pre></div>
-</td></tr></table>
-
-<p>To see if it installed correctly, try and open RStudio from the GNOME menu - there's not simple verification from the terminal.</p>
-<h2 id="installing-rstudio-for-windows-users">Installing RStudio for Windows Users</h2>
-<p>Using RStudio together with the R that we installed into our WSL Ubuntu setup is a little trickier - because we don't have access to a graphical interface.</p>
-<p>The trick will be to install the server version of RStudio.
-It may sound slightly daunting - but it is actually quite easy!</p>
-<p>First, we download the most recent version of RStudio Server for Ubuntu 18 (see <a href="https://rstudio.com/products/rstudio/download-server/debian-ubuntu/">here</a>).
-Enter the following into your terminal and press <code>Return</code>:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.2.5033-amd64.deb
-</pre></div>
-</td></tr></table>
-
-<p>Now install it by entering this command and hitting <code>Return</code>:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo gdebi rstudio-server-1.2.5033-amd64.deb
-</pre></div>
-</td></tr></table>
-
-<p>Now that we have RStudio installed on our subsystem, how can we use it?</p>
-<p>In the Ubuntu terminal enter the following text and press <code>Return</code>:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo rstudio-server start
-</pre></div>
-</td></tr></table>
-
-<p>Now open a web browser, and go to the following address:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>http://localhost:8787/
-</pre></div>
-</td></tr></table>
-
-<p>which will take you to a log in page.</p>
-<p>Log in using the username and password for your Ubuntu terminal that we set up at the beginning.</p>
-<p>After logging in successfully you have access to the RStudio that you installed in your Ubuntu subsystem.</p>
-<p>To log out, click on the log out button in the top right corner.</p>
-<p>To stop the RStudio server from running (logging out doesn't stop it), enter <code>rstudio stop</code> into your terminal.</p>
+                <h1 id="previous-versions-of-the-installation-guide">Previous Versions of the Installation Guide</h1>
+<p>Our installation guide is updated periodically to reflect changes in course content, and changes ways to install certain programs and packages.</p>
+<p>Here are the links to previous versions of the Installation Guide:</p>
+<ul>
+<li><a href="pp4rs.github.io/2017-uzh-installation-guide"><code>2017 edition</code></a>, by Lachlan Deer, Adrian Etter, Julian Langer &amp; Max Winkler</li>
+<li><a href="pp4rs.github.io/2018-uzh-installation-guide"><code>2018 edition</code></a>, by Ulrich Bergmann, Ursina Schaede, Dora Simon, Carlo Zanella &amp; Christian Zuend</li>
+<li><a href="https://github.com/pp4rs/foundations-installation-guide"><code>2019 Foundations edition</code></a>, by Lachlan Deer &amp; Julian Langer</li>
+</ul>
+<h2 id="major-changes">Major Changes</h2>
+<h3 id="v2020x">v2020.x</h3>
+<ul>
+<li>Migrate from Cygwin to Windows to Linux Subsystem</li>
+<li>Remove GIS guide</li>
+<li>Split's installation instructions of R, RStudio and additional R packaged into separate versions</li>
+</ul>
+<h2 id="2019-foundations-edition">2019 Foundations edition</h2>
+<ul>
+<li>Focus only on R, terminal, Git and snakemake</li>
+</ul>
               
             </div>
           </div>
@@ -245,10 +210,10 @@ Enter the following into your terminal and press <code>Return</code>:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../r-packages/" class="btn btn-neutral float-right" title="R Packages">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../acknowledgement/" class="btn btn-neutral float-right" title="Acknowledgements">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../r/" class="btn btn-neutral" title="R"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../citation-license/" class="btn btn-neutral" title="Citation & License"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -274,10 +239,10 @@ Enter the following into your terminal and press <code>Return</code>:</p>
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../r/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../citation-license/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../r-packages/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../acknowledgement/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
