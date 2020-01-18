@@ -114,10 +114,12 @@ sudo apt-get install gdebi-core
 <!-- markdownlint-disable -->
 !!! tip "Windows Users: Copy and Paste"
     The 'traditional' `Ctrl + C` and `Ctrl + v` doesn't work with your terminal because as `Ctrl + Key` commands have a special meaning.
-    To save manually writing stuff in there's two alternatives:
+    There are two alternatives:
 
     * Use the 'Linux' copy and paste commands: copy is `Ctrl + Shift + C` and paste is `Ctrl + Shift + V`.
-    * Highlight the text with you cursor, and then in the terminal use your mouses right-click to paste it in.
+    * To paste text, you just do a right-click.
+    To copy anything inside the terminal, you use highlight the text with your cursor.
+    It is automatically copied to your clipboard.
 <!-- markdownlint-restore -->
 
 <!-- markdownlint-capture -->
