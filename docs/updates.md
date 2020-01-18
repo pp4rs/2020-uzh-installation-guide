@@ -10,7 +10,7 @@ Here are the links to previous versions of the Installation Guide:
 
 ## Major Changes
 
-### v2020.x:
+### v2020.x
 
 * Migrate from Cygwin to Windows to Linux Subsystem
 * Remove GIS guide
@@ -19,4 +19,3 @@ Here are the links to previous versions of the Installation Guide:
 ## 2019 Foundations edition
 
 * Focus only on R, terminal, Git and snakemake
-
