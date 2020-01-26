@@ -17,7 +17,7 @@ to_install <-c( "reshape", "rmarkdown",
                 "xtable","tidyverse", "AER",
                 "rdd", "car", "aod", "lmtest",
                 "lfe", "nlme", "lme4",
-                "erer", "margins", "multiwayvcov"
+                "erer", "margins", "multiwayvcov",
                 "lubridate", "haven", "rddensity",
                 "rdrobust", "ivpack", "readxl",
                 "ggrepel", "multiwayvcov", "RSQLite",
