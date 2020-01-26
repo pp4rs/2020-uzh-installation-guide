@@ -45,7 +45,7 @@ The OSX terminal doesn't have this autocompletion by default, so let's add it us
 Open a terminal and enter:
 
 ``` bash
-brew install auto-completion
+brew install bash-completion
 ```
 
 This installs 'bash completion' into a file `/usr/local/etc/bash_completion.d`.
