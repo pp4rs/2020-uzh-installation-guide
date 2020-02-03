@@ -178,7 +178,7 @@ Here we will make the extra few changes we need to complete the installation gui
 <p>You will need local administration rights for your computer, but you should have these on your personal computers or ones owned by the Department.</p>
 <p>Right-click on Computer. Then go to "Properties" and select the tab "Advanced System settings". Choose "Environment Variables" and select "Path" from the list of system variables.</p>
 <p>Choose “Edit” and append (i.e., do not overwrite the previous value):</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">    ;C:\Path\to\program.exe</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>    <span class="p">;</span><span class="k">C</span><span class="p">:</span><span class="err">\</span><span class="n">Path</span><span class="err">\</span><span class="k">to</span><span class="err">\</span><span class="n">program</span><span class="p">.</span><span class="n">exe</span>
 </pre></div>
 </td></tr></table>
 
@@ -188,10 +188,10 @@ Here we will make the extra few changes we need to complete the installation gui
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">    ;C:\Users\ldeer\AppData\Local\atom\bin</span>
-<span class="err">    ;C:\Program Files\Git\bin</span>
-<span class="err">    ;C:\Program Files\R\R-3.X.X\bin</span>
-<span class="err">    ;</span>
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>    <span class="p">;</span><span class="k">C</span><span class="p">:</span><span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="n">ldeer</span><span class="err">\</span><span class="n">AppData</span><span class="err">\</span><span class="k">Local</span><span class="err">\</span><span class="n">atom</span><span class="err">\</span><span class="n">bin</span>
+    <span class="p">;</span><span class="k">C</span><span class="p">:</span><span class="err">\</span><span class="n">Program</span> <span class="n">Files</span><span class="err">\</span><span class="n">Git</span><span class="err">\</span><span class="n">bin</span>
+    <span class="p">;</span><span class="k">C</span><span class="p">:</span><span class="err">\</span><span class="n">Program</span> <span class="n">Files</span><span class="err">\</span><span class="n">R</span><span class="err">\</span><span class="n">R</span><span class="o">-</span><span class="mi">3</span><span class="p">.</span><span class="n">X</span><span class="p">.</span><span class="n">X</span><span class="err">\</span><span class="n">bin</span>
+    <span class="p">;</span>
 </pre></div>
 </td></tr></table>
 
@@ -200,7 +200,7 @@ Here we will make the extra few changes we need to complete the installation gui
 This file lives in your home directory and it is hidden from your view by default.</p>
 <p>We now provide a guide of how to create / adjust this file using a tiny editor called nano, if you are familiar with editing text files, just use your editor of choice.</p>
 <p>Open a Terminal and type:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">    nano ~/.bash_profile</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>    <span class="n">nano</span> <span class="o">~/</span><span class="p">.</span><span class="n">bash_profile</span>
 </pre></div>
 </td></tr></table>
 
@@ -227,8 +227,8 @@ This file lives in your home directory and it is hidden from your view by defaul
 <p>Your default locale settings may conflict with some of the programs we'll need.
 If you want to be on the safe side, add these lines to your .bash_profile file:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">    export LC_ALL=en_US.UTF-8</span>
-<span class="err">    export LANG=en_US.UTF-8</span>
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>    <span class="n">export</span> <span class="n">LC_ALL</span><span class="o">=</span><span class="n">en_US</span><span class="p">.</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span>
+    <span class="n">export</span> <span class="n">LANG</span><span class="o">=</span><span class="n">en_US</span><span class="p">.</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span>
 </pre></div>
 </td></tr></table>
 
