@@ -1,5 +1,5 @@
 # PP4RS 2020 Linux Installation Guide
-# Part 1: CLI, LaTex, Pandoc, R
+# All in one file
 
 echo "--- PP4RS 2020 CLI Installation Script Start"
 
